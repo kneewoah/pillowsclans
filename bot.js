@@ -28,6 +28,11 @@ client.on("message", async message => {
   
   // Let's go with a few common example commands! Feel free to delete or change those.
   
+  if(command === "prefix") {
+      let newPrefix = message.content.split(" ").slice(1, 2)[0];
+      config.prefix = newPrefix;
+      fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
+}
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
