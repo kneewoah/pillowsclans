@@ -112,7 +112,7 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
-  n
+  
   if(command === "iw") {
       let time = args[0];
       let drop = args[1];
