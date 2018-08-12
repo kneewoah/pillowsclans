@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 client.on("message", (message) => {
   if(message.author.bot) return;
-  if(!msg.content.startsWith(config.prefix)) return;
+  if(message.content.indexOf(config.prefix) !== 0) return;
 
   // Here we separate our "command" name, and our "arguments" for the command. 
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
