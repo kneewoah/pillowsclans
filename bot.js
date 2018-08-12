@@ -32,6 +32,10 @@ client.on("message", async message => {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
+    
+  if(command === "help") {
+    	message.reply('here is a list of commands');
+  }
   
   if(command === "say") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
