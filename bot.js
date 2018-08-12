@@ -114,11 +114,10 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-    const embed = new RichEmbed()
-      .setTitle('Iron Wizard')
-      .setColor(0xc4c4c4)
-      .setDescription('hmm');
-    message.channel.send(embed);
+    message.channel.send({embed: {
+        color: c4c4c4,
+        description: "A very simple Embed!"
+}})
   }
 });
 
