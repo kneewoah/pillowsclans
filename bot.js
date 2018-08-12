@@ -118,7 +118,7 @@ client.on("message", async message => {
       let drop = args[1];
       let extra = args[2];
       let more = args[3];
-      message.channel.send(`An Iron Wizard spawned for ${time} minutes and dropped a(n) ${drop} {extra} {more}`);
+      message.channel.send(`An Iron Wizard spawned for ${time} minutes and dropped a(n) ${drop} ${extra} ${more}`);
   }
 });
 
