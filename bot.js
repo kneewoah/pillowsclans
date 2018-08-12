@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
-const fs = require("fs")
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -34,14 +33,6 @@ client.on("message", async message => {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
-    
-  if(command === "prefix") {
-      let newPrefix = message.content.split(" ").slice(1, 2)[0];
-      config.prefix = newPrefix;
-
-  // Now we have to save the file.
-  fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
-}
     
   if(command === "help") {
     	message.reply(`here is a list of commands: \n **${config.prefix}ping** - Calculates latency \n **${config.prefix}say** - The bot parrots what you type \n **${config.prefix}kick** - Kick a user \n **${config.prefix}ban** - Ban a user \n **${config.prefix}purge** - Delete between 2 and 100 messages`);
