@@ -13,7 +13,7 @@ client.on("message", async message => {
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
   
-  //Stop if no prefix!!!
+  // Stop if no prefix!!!
   if(!msg.content.startsWith(config.prefix)) return;
   
   // Here we separate our "command" name, and our "arguments" for the command. 
