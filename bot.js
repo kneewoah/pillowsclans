@@ -112,7 +112,7 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      message.send("test")
+      message.send("test");
   }
 });
 
