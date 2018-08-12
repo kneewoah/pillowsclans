@@ -111,7 +111,8 @@ client.on("message", async message => {
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
   
-  if(command === "iw","wizard") {
+  if(command === "iw","wizard", "iron wizard") {
+      message.send("test")
   }
 });
 
