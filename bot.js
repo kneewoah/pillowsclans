@@ -114,7 +114,9 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      message.channel.send("hello");
+      let time = args[0];
+      let drop = args[1];
+      message.channel.send(`Iron Wizard spawned for ${time} minutes and dropped a ${drop}`);
   }
 });
 
