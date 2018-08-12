@@ -13,9 +13,8 @@ client.on("message", async message => {
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
   
-  // Also good practice to ignore any message that does not start with our prefix, 
-  // which is set in the configuration file.
-  if(message.content.indexOf(config.prefix) !== 0) return;
+  //Stop if no prefix!!!
+  if(!msg.content.startsWith(config.prefix)) return;
   
   // Here we separate our "command" name, and our "arguments" for the command. 
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
@@ -76,6 +75,7 @@ client.on("message", async message => {
   }
   
   if(command === "ban") {
+      
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
@@ -112,7 +112,11 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      message.channel.send("test");
+    const embed = new RichEmbed()
+      .setTitle('Iron Wizard')
+      .setColor(0xc4c4c4)
+      .setDescription('hmm');
+    message.channel.send(embed);
   }
 });
 
