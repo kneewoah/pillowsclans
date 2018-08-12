@@ -34,7 +34,7 @@ client.on("message", async message => {
   }
     
   if(command === "help") {
-    	message.reply(`here is a list of commands: \n ${config.prefix}ping - Calculates latency \n ${config.prefix}say - The bot parrots what you type`);
+    	message.reply(`here is a list of commands: \n **${config.prefix}ping** - Calculates latency \n **${config.prefix}say** - The bot parrots what you type \n **${config.prefix}kick** - Kick a user from the server \n **${config.prefix}ban** - Ban a user from the server \n **${config.prefix}purge** - Purge between 2 and 100 messages`);
   }
   
   if(command === "say") {
