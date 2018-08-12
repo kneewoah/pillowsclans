@@ -116,8 +116,7 @@ client.on("message", async message => {
   if(command === "iw") {
     message.channel.send({embed: {
         color: c4c4c4,
-        description: "A very simple Embed!"
-}})
+        description: "A very simple Embed!"}});
   }
 });
 
