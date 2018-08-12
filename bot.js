@@ -34,7 +34,8 @@ client.on("message", async message => {
   }
     
   if(command === "help") {
-    	message.reply('here is a list of commands');
+    	message.reply('here is a list of commands:
+                      !ping - calculates latency');
   }
   
   if(command === "say") {
