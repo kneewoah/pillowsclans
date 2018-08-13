@@ -67,7 +67,6 @@ client.on("message", async message => {
   if(command === "iw") {
       let rarity = args[0];
       let drop = args[1];
-      let color = if(rarity === "blue") config.blue; if(rarity === "red") config.red; if(rarity === "white") config.white; if(rarity === "gold") config.gold;
       let time = args[2];
       
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
