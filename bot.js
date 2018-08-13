@@ -68,11 +68,11 @@ client.on("message", async message => {
       let rare = args[0];
          if(rare === "blue") {
              let color = config.blue;
-         } if(rare === "red") {
+         } else if(rare === "red") {
              let color = config.red;
-         } if(rare === "gold") {
+         } else if(rare === "gold") {
              let color = config.gold;
-         } if(rare === "white") {
+         } else if(rare === "white") {
              let color = config.white;
          }
       let drop = args[1];
