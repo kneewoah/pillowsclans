@@ -1,13 +1,12 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 const config = require("./config.json");
 
-bot.on('ready') () => {
+client.on('ready') () => {
     console.log('I am ready!');
-    bot.user.setStatus('dnd');
 });
 
-bot.on("message", async message => {
+client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   
   // It's good practice to ignore other bots. This also makes your bot ignore itself
@@ -32,7 +31,7 @@ bot.on("message", async message => {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
     const m = await message.channel.send("Ping?");
-    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(bot.ping)}ms`);
+    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
     
   if(command === "help") {
@@ -122,4 +121,4 @@ bot.on("message", async message => {
 });
 
 // THIS  MUST  BE  THIS  WAY
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
