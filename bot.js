@@ -83,7 +83,7 @@ client.on("message", async message => {
         .addField("Length", `${time} minutes`)
         .addField("Drop", `${dropUp}`, true);
      client.channels.get("478347833842335765").send({embed});
-     message.channels.send("Sucessfully logged.");
+     message.channel.send("Sucessfully logged.");
   }
 });
 
