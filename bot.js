@@ -70,13 +70,13 @@ client.on("message", async message => {
       let time = args[2];
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       if(rarity === "red") {
-          let color = "#e81f09" return
+          let color = "#e81f09"
           } else if(rarity === "white") {
-              let color = "#ffffff" return
+              let color = "#ffffff"
               } else if(rarity === "gold") {
-                  let color = "#e8d109" return
+                  let color = "#e8d109"
                   } else if(rarity === "blue") {
-                      let color = "#7be0f7" return
+                      let color = "#7be0f7"
                       } else return message.channel.send("Please enter a valid rarity color: blue, white, gold, or red"
                       
       const embed = new Discord.RichEmbed()
