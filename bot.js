@@ -65,27 +65,28 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      let time = args[0];
+      let color = args[0];
       let drop = args[1];
+      let time = args[2];
+      const author = message.author;
       const embed = new Discord.RichEmbed()
-  .setTitle("This is your title, it can hold 256 characters")
-  .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
+  .setTitle("**Iron Wizard**")
+  .setAuthor("message.author", "")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor("#00AE86")
-  .setDescription("DESCRIPTION")
-  .setFooter("FOOTER")
+  .setDescription("")
+  .setFooter("")
   .setImage("http://i.imgur.com/yVpymuV.png")
   .setThumbnail("https://minecraft.gamepedia.com/Iron_Golem#/media/File%3AIron_Golem.png")
   /*
    * Takes a Date object, defaults to current date.
    */
   .setTimestamp()
-  .setURL("https://mineplex.com")
-  .addField("TITLE", "INFO")
   .addBlankField(true)
-  .addField("TITLE2", "INFO2", true);
+  .addField("Length", `${time} minutes`)
+  .addField("Drop", `${drop}`, true);
   client.channels.get("478347833842335765").send({embed});
   }
 });
