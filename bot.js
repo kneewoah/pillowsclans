@@ -68,13 +68,14 @@ client.on("message", async message => {
       let rarity = args[0];
       let drop = args[1];
       let time = args[2];
+      let color = config.rarity;
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`, "")
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor(`${config.rarity}`)
+        .setColor({color})
         .setDescription("")
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
