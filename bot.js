@@ -68,7 +68,7 @@ client.on("message", async message => {
       let color = args[0];
       let drop = args[1];
       let time = args[2];
-      if(color !== "red" || "Red" || "blue" || "Blue" || "White" || "white" || "yellow" || "Yellow")
+      if({color} !== "red" || "Red" || "blue" || "Blue" || "White" || "white" || "yellow" || "Yellow")
           return message.reply("Please enter a valid rarity");
           
       const author = discord.message.author;
