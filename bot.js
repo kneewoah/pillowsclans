@@ -3,8 +3,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on("ready", () => {
-    console.log("I am ready!");
-    client.user.setActivity('Mineplex Clans', {type: 'PLAYING'});
+    console.log("I am ready!")
 });
 
 client.on("message", async message => {
