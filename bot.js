@@ -68,7 +68,7 @@ client.on("message", async message => {
       let rarity = args[0];
       let drop = args[1];
       let time = args[2];
-      let color = config.rarity;
+      const color = config.rarity;
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
       const embed = new Discord.RichEmbed()
