@@ -70,7 +70,7 @@ client.on("message", async message => {
       let time = args[2];
       if(color === "red" || color === "Red" || color === "blue" || color === "Blue" || color === "White" || color === "white" || color === "yellow" || color === "Yellow")
           message.reply("success")
-          else return message.reply("Please enter a valid rarity");
+          else return message.reply("Please enter a valid rarity color [blue, white, yellow, red]");
           
       const author = discord.message.author;
       const embed = new Discord.RichEmbed()
