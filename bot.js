@@ -65,10 +65,22 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
+      const author = message.author
       let color = args[0];
       let drop = args[1];
       let time = args[2];
-      client.channels.get("478347833842335765").send("embed");
+      const embed = new Discord.RichEmbed()
+        .setTitle("**Iron Wizard**")
+        .setAuthor({author}, "")
+        // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+        .setColor("#00AE86")
+        .setDescription("")
+        .setFooter("Sucessfully logged.")
+        // Takes a Date object, defaults to current date.
+        .setTimestamp()
+        .addField("Length", `${time} minutes`)
+        .addField("Drop", `${drop}`, true);
+     client.channels.get("478347833842335765").send({embed});
   }
 });
 
