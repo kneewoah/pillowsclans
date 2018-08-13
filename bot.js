@@ -3,6 +3,8 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+    client.user.setStatus("dnd")
+    client.ueer.setActivity("Mineplex Clans")
 });
 
 client.on('message', message => {
