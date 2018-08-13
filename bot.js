@@ -68,6 +68,9 @@ client.on("message", async message => {
       let color = args[0];
       let drop = args[1];
       let time = args[2];
+      if(color === "red" || "Red") {
+          let border = "#EE2717" return;
+          
       const author = message.author;
       const embed = new Discord.RichEmbed()
   .setTitle("**Iron Wizard**")
