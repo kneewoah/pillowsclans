@@ -4,7 +4,7 @@ const config = require("./config.json");
 
 client.on('ready', () => {
     console.log('I am ready!');
-    client.user.setActivity({game: {name: "Mineplex Clans", type: 0}})
+    client.user.setActivity({game: {name: "Mineplex Clans", type: 0}});
 });
 
 client.on("message", async message => {
