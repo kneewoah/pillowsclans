@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
 
-client.on("ready", () => {
+client.on('ready') () => {
     console.log('I am ready!');
+    bot.user.setStatus('dnd');
 });
 
 client.on("message", async message => {
@@ -116,7 +117,7 @@ client.on("message", async message => {
   if(command === "iw") {
       let time = args[0];
       let drop = args[1];
-      message.reply(`**Iron Wizard** \nTime Started: NA \nTime Ended: NA \nDrop: ${drop}`);
+      message.channel.send(`**Iron Wizard** \nTime Started: NA \nTime Ended: NA \nDrop: ${drop}`);
   }
 });
 
