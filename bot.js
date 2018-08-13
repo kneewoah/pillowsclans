@@ -65,13 +65,13 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      const author = message.author
+      const author = message.author.id
       let color = args[0];
       let drop = args[1];
       let time = args[2];
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
-        .setAuthor({author}, "")
+        .setAuthor(<@{author}>, "")
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
         .setColor("#00AE86")
         .setDescription("")
