@@ -67,6 +67,7 @@ client.on("message", async message => {
   if(command === "iw") {
       let rarity = args[0];
       let drop = args[1];
+      let color = if(rarity === "blue") config.blue; if(rarity === "red") config.red; if(rarity === "white") config.white; if(rarity === "gold") config.gold;
       let time = args[2];
       
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
@@ -75,10 +76,7 @@ client.on("message", async message => {
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`, "")
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor(if(rarity === "blue") config.blue; 
-      if(rarity === "red") config.red; 
-      if(rarity === "white") config.white; 
-      if(rarity === "gold") config.gold;)
+        .setColor(color)
         .setDescription("")
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
