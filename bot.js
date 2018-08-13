@@ -3,9 +3,9 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on('ready', () => {
-    console.log('I am ready!');
     client.user.setActivity({game: {name: "Mineplex Clans", type: 0}});
-});
+    client.user.setStatus("dnd");
+    console.log('I am ready!');
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
@@ -117,7 +117,7 @@ client.on("message", async message => {
   if(command === "iw") {
       let time = args[0];
       let drop = args[1];
-      client.guilds.get(478229341139107860).channels.get(478347833842335765).send(`**Iron Wizard** \nTime Started: NA \nTime Ended: NA \nDrop: ${drop}`);
+      client.channels.get(478347833842335765).send(`**Iron Wizard** \nTime Started: NA \nTime Ended: NA \nDrop: ${drop}`);
   }
 });
 
