@@ -66,7 +66,6 @@ client.on("message", async message => {
   
   if(command === "iw") {
       let rarity = args[0];
-      let color = config.rarity
       let drop = args[1];
       let time = args[2];
       
@@ -79,8 +78,7 @@ client.on("message", async message => {
         .setColor(if(rarity === "blue") config.blue; 
       if(rarity === "red") config.red; 
       if(rarity === "white") config.white; 
-      if(rarity === "gold") config.gold;
-      else return;)
+      if(rarity === "gold") config.gold;)
         .setDescription("")
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
