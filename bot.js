@@ -65,7 +65,7 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      const author = message.author.id
+      let author = message.author.id
       let color = args[0];
       let drop = args[1];
       let time = args[2];
