@@ -68,13 +68,13 @@ client.on("message", async message => {
       let color = args[0];
       let drop = args[1];
       let time = args[2];
-      if(color === "red" || "Red") {
-          let border = "#EE2717" return;
+      if(color !== "red" || "Red" || "blue" || "Blue" || "White" || "white" || "yellow" || "Yellow")
+          return message.reply("Please enter a valid rarity");
           
-      const author = message.author;
+      const author = discord.message.author;
       const embed = new Discord.RichEmbed()
   .setTitle("**Iron Wizard**")
-  .setAuthor("message.author", "")
+  .setAuthor(`${author}`, "")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
