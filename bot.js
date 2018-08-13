@@ -2,22 +2,26 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
 
-client.on("ready", () => {
+client.on('ready', () => {
     client.user.setActivity("Game"); 
-    client.user.setStatus("dnd")
-    console.log("I am ready!");
+    client.user.setStatus("dnd");
+    console.log('I am ready!');
 });
+
+client.on('message', message => {
+    
+    
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
+
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   
-  // It's good practice to ignore other bots. This also makes your bot ignore itself
-  // and not get into a spam loop (we call that "botception").
-  if(message.author.bot) return;
-  
-  // Also good practice to ignore any message that does not start with our prefix, 
-  // which is set in the configuration file.
-  if(message.content.indexOf(config.prefix) !== 0) return;
+ 
+  if(message.author.bot || message.content.indexOf(config.prefix) !== 0) return;
   
   // Here we separate our "command" name, and our "arguments" for the command. 
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
@@ -121,9 +125,6 @@ client.on("message", async message => {
       client.channels.get(478347833842335765).send(`**Iron Wizard** \nTime Started: NA \nTime Ended: NA \nDrop: ${drop}`);
   }
 });
-
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
