@@ -70,6 +70,7 @@ client.on("message", async message => {
       let time = args[2];
       
       const color = config.args[0];
+      
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
       const embed = new Discord.RichEmbed()
@@ -81,7 +82,7 @@ client.on("message", async message => {
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
-        .addField("Length", `${color} minutes`)
+        .addField("Length", `${time} minutes`)
         .addField("Drop", `${dropUp}`, true);
      client.channels.get("478347833842335765").send({embed});
   }
