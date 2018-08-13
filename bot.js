@@ -80,7 +80,7 @@ client.on("message", async message => {
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
-        .addField("Length", `${time} minutes`)
+        .addField("Length", `${color} minutes`)
         .addField("Drop", `${dropUp}`, true);
      client.channels.get("478347833842335765").send({embed});
   }
