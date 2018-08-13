@@ -75,7 +75,7 @@ client.on("message", async message => {
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`, "")
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor(color)
+        .setColor(`#${color}`)
         .setDescription("")
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
