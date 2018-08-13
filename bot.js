@@ -68,7 +68,6 @@ client.on("message", async message => {
       let color = args[0];
       let drop = args[1];
       let time = args[2];
-      const author = discord.message.author;
       const embed = new Discord.RichEmbed()
   .setTitle("**Iron Wizard**")
   .setAuthor(`${author}`, "")
