@@ -69,7 +69,7 @@ client.on("message", async message => {
       let drop = args[1];
       let time = args[2];
       
-      const color = config.args[0];
+      let color = config.args[0];
       
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
