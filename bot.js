@@ -74,7 +74,7 @@ client.on("message", async message => {
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
         .setColor("#00AE86")
         .setDescription("")
-        .setFooter("Sucessfully logged.")
+        .setFooter("The mighty Iron Wizard has fallen!)
         // Takes a Date object, defaults to current date.
         .setTimestamp()
         .addField("Length", `${time} minutes`)
