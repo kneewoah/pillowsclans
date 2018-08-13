@@ -77,14 +77,11 @@ client.on("message", async message => {
    */
   .setColor("#00AE86")
   .setDescription("")
-  .setFooter("")
-  .setImage("http://i.imgur.com/yVpymuV.png")
-  .setThumbnail("https://minecraft.gamepedia.com/Iron_Golem#/media/File%3AIron_Golem.png")
+  .setFooter("Sucessfully logged.")
   /*
    * Takes a Date object, defaults to current date.
    */
   .setTimestamp()
-  .addBlankField(true)
   .addField("Length", `${time} minutes`)
   .addField("Drop", `${drop}`, true);
   client.channels.get("478347833842335765").send({embed});
