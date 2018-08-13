@@ -68,6 +68,7 @@ client.on("message", async message => {
       let color = args[0];
       let drop = args[1];
       let time = args[2];
+      let dropUp = drop.indexOf(0).toUpperCase()
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`, "")
@@ -78,7 +79,7 @@ client.on("message", async message => {
         // Takes a Date object, defaults to current date.
         .setTimestamp()
         .addField("Length", `${time} minutes`)
-        .addField("Drop", `${drop}`, true);
+        .addField("Drop", `${dropUp}`, true);
      client.channels.get("478347833842335765").send({embed});
   }
 });
