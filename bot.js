@@ -66,7 +66,9 @@ client.on("message", async message => {
   
   if(command === "iw") {
       let rare = args[0];
-         let color = config.rare;
+         if rare === "blue"; "red" {
+         let color = config.blue; config.red;
+         }
       let drop = args[1];
       let time = args[2];
       
