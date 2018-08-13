@@ -65,15 +65,25 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      let color = args[0];
+      let rarity = args[0];
       let drop = args[1];
       let time = args[2];
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
+      if(rarity === "red") {
+          let color = "#e81f09" return
+          } else if(rarity === "white") {
+              let color = "#ffffff" return
+              } else if(rarity === "gold") {
+                  let color = "#e8d109" return
+                  } else if(rarity === "blue") {
+                      let color = "#7be0f7" return
+                      } else return message.channel.send("Please enter a valid rarity color: blue, white, gold, or red"
+                      
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`, "")
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor("#00AE86")
+        .setColor({color})
         .setDescription("")
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
