@@ -116,7 +116,7 @@ client.on("message", async message => {
   if(command === "iw") {
       let time = args[0];
       let drop = args[1];
-      client.channels.get(478347833842335765).send(`**Iron Wizard** \nTime Started: NA \nTime Ended: NA \nDrop: ${drop}`);
+      client.channels.get(478347833842335765).send("**Iron Wizard** \nTime Started: NA \nTime Ended: NA \nDrop: ${drop}");
   }
 });
 
