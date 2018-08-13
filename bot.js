@@ -68,16 +68,6 @@ client.on("message", async message => {
       let color = args[0];
       let drop = args[1];
       let time = args[2];
-      if(color === "red")
-          let border = "#dd2323";
-      if(color === "blue")
-          let border = "#76d5f7";
-      if(color === "gold")
-          let border = "#f7e176";
-      if(color === "white")
-          let border = "#ffffff";
-          else return message.reply("Please enter a valid rarity color [blue, white, gold, red]");
-          
       const author = discord.message.author;
       const embed = new Discord.RichEmbed()
   .setTitle("**Iron Wizard**")
