@@ -69,8 +69,9 @@ client.on("message", async message => {
       let drop = args[1];
       let time = args[2];
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
+      
       if(rarity === "red") {
-          let color = "#e81f09"
+         let color = "#e81f09"
           } else if(rarity === "white") {
               let color = "#ffffff"
               } else if(rarity === "gold") {
