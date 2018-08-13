@@ -84,6 +84,7 @@ client.on("message", async message => {
   .setTimestamp()
   .addField("Length", `${time} minutes`)
   .addField("Drop", `${drop}`, true);
+     
   client.channels.get("478347833842335765").send({embed});
   }
 });
