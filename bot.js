@@ -22,25 +22,24 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
     
+  if(command === "help") {
+    	message.reply(`Here is a list of commands:
+\n*Admin:*
+\n**${config.prefix}ping** - Calculates latency
+\n**Moderation:*
+\n**${config.prefix}purge** - Delete between 2 and 100 messages
+\n*Clans:*
+\n**${config.prefix}iw** <rarity color> <drop> <length (minutes)> - posts an Iron Wizard log in the specified events channel
+\n**${config.prefix}sk** <rarity color> <drop> <length (minutes)> - posts a Skeleton King log in the specified events channel
+\n*Fun:*
+\n**${config.prefix}say** - The bot parrots what you type`);
+  }
+    
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-  }
-    
-  if(command === "help") {
-    	message.reply(`here is a list of commands: \n **${config.prefix}ping** - Calculates latency \n **${config.prefix}say** - The bot parrots what you type \n **${config.prefix}kick** - Kick a user \n **${config.prefix}ban** - Ban a user \n **${config.prefix}purge** - Delete between 2 and 100 messages`);
-  }
-  
-  if(command === "say") {
-    // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
-    // To get the "message" itself we join the `args` back into a string with spaces: 
-    const sayMessage = args.join(" ");
-    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-    message.delete().catch(O_o=>{}); 
-    // And we get the bot to say the thing: 
-    message.channel.send(sayMessage);
   }
   
   if(command === "purge") {
@@ -59,7 +58,7 @@ client.on("message", async message => {
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
   
-  if(command === "iw") {
+  if(command === "iw" || "wizard") {
       let rarity = args[0];
       let drop = args[1];
       let time = args[2];
@@ -103,6 +102,16 @@ client.on("message", async message => {
      client.channels.get(config.logChannel).send({embed})
      
      message.channel.send("Sucessfully logged.");
+  }
+    
+  if(command === "say") {
+    // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
+    // To get the "message" itself we join the `args` back into a string with spaces: 
+    const sayMessage = args.join(" ");
+    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+    message.delete().catch(O_o=>{}); 
+    // And we get the bot to say the thing: 
+    message.channel.send(sayMessage);
   }
 });
 
