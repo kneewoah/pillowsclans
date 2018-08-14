@@ -26,7 +26,7 @@ client.on("message", async message => {
     	message.reply(`Here is a list of commands:
 \n*Admin:*
 \n**${config.prefix}ping** - Calculates latency
-\n**Moderation:*
+\n*Moderation:*
 \n**${config.prefix}purge** - Delete between 2 and 100 messages
 \n*Clans:*
 \n**${config.prefix}iw** <rarity color> <drop> <length (minutes)> - posts an Iron Wizard log in the specified events channel
