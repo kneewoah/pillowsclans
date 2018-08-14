@@ -111,6 +111,47 @@ client.on("message", async message => {
      
      message.channel.send("Sucessfully logged.");
   }
+ 
+  if(command === "cp" || "koth") {
+      let rarity = args[0];
+      let drop = args[1];
+      let time = args[2];
+      
+      const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
+      
+      const embed = new Discord.RichEmbed()
+        .setTitle("**Capture Point**")
+        .setAuthor(`Logged by ${message.author.username}`)
+        // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+        .setColor()
+        .setFooter(`${message.author.username} has captured the point!`)
+        // Takes a Date object, defaults to current date.
+        .setTimestamp()
+        .addField("Drop", `${dropUp}`)
+        .addField("Length", `${time} minutes`);
+      
+     client.channels.get(config.logChannel).send({embed})
+     
+     message.channel.send("Sucessfully logged.");
+  }
+    
+  if(command === "uc" || "city" || "undead") {
+      let time = args[0];
+      
+      const embed = new Discord.RichEmbed()
+        .setTitle("**Undead City**")
+        .setAuthor(`Logged by ${message.author.username}`)
+        // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+        .setColor()
+        .setFooter("All the chests have been looted")
+        // Takes a Date object, defaults to current date.
+        .setTimestamp()
+        .addField("Length", `${time} minutes`);
+      
+     client.channels.get(config.logChannel).send({embed})
+     
+     message.channel.send("Sucessfully logged.");
+  }
     
   // FUN COMMANDS
     
