@@ -157,7 +157,12 @@ client.on("message", async message => {
   }
     
   // FUN COMMANDS
-    
+  
+  if(command === "blue") {
+      message.channel.send(<@219506178680553473>);
+      message.channel.send(<@219506178680553473>);
+      message.channel.send(<@219506178680553473>);
+      message.channel.send(<@219506178680553473>);       
 });
 
 // THIS  MUST  BE  THIS  WAY
