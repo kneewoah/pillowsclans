@@ -68,7 +68,7 @@ client.on("message", async message => {
           const color = "e81f09";
           }
       if(rarity === "blue") {
-          const color = "be0f7";
+          const color = "#87cef2";
           }
       if(rarity === "white") {
           const color = config.white;
