@@ -64,23 +64,23 @@ client.on("message", async message => {
       let drop = args[1];
       let time = args[2];
       
+      
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
+      if (rarity === "red", "blue", "white", "gold") {
+         let color = "e81f09", "87cef2", "ffffff", "e8d109";
+         const embed = new Discord.RichEmbed()
+            .setTitle("**Iron Wizard**")
+            .setAuthor(`Logged by ${message.author.username}`)
+            // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+            .setColor()
+            .setFooter("The mighty Iron Wizard has fallen!")
+            // Takes a Date object, defaults to current date.
+            .setTimestamp()
+            .addField("Length", `${time} and ${color} minutes`)
+            .addField("Drop", `${dropUp}`);
       
-      const embed = new Discord.RichEmbed()
-        .setTitle("**Iron Wizard**")
-        .setAuthor(`Logged by ${message.author.username}`)
-        // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        if(rarity === "red") {
-            let color = "e81f09";
-        }
-        .setColor(color)
-        .setFooter("The mighty Iron Wizard has fallen!")
-        // Takes a Date object, defaults to current date.
-        .setTimestamp()
-        .addField("Length", `${time} minutes`)
-        .addField("Drop", `${dropUp}`);
-      
-     client.channels.get(config.logChannel).send({embed});
+         client.channels.get(config.logChannel).send({embed});
+      }
      message.channel.send("Sucessfully logged.");
   }
 });
