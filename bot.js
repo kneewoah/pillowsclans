@@ -210,8 +210,6 @@ client.on("message", async message => {
   
   if(command === "roll") {
       
-      const value = math.floor(math.random()*6)+1;
-      
       message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
   }
 });
