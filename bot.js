@@ -115,10 +115,6 @@ client.on("message", async message => {
     color = config.white;
       } if(rarity === "gold") {
     color = config.gold;
-      } if(rarity === "gray") {
-    color = config.gray;
-      } if(rarity === "purple") {
-    color = config.purple;
       }
       
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
