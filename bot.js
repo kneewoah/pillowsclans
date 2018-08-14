@@ -66,17 +66,15 @@ client.on("message", async message => {
       
       if(rarity === "red") {
           const color = config.red
-          message.channel.send("we got past ONE");
           }
       if(rarity === "blue") {
           const color = config.blue;
-          message.channel.send("we got past TWO");
           }
       if(rarity === "white") {
-          let color = config.white;
+          const color = config.white;
           }
       if(rarity === "gold") {
-          let color = config.gold;
+          const color = config.gold;
           }
       
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
