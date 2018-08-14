@@ -66,7 +66,7 @@ client.on("message", async message => {
     
   //CLANS COMMANDS
     
-  if(command === "iw" || "wizard") {
+  if(command === "iw") {
       let rarity = args[0];
       let drop = args[1];
       let time = args[2];
@@ -112,7 +112,8 @@ client.on("message", async message => {
      message.channel.send("Sucessfully logged.");
   }
  
-  if(command === "cp" || "koth") {
+    
+  if(command === "cp") {
       let rarity = args[0];
       let drop = args[1];
       let time = args[2];
@@ -135,7 +136,8 @@ client.on("message", async message => {
      message.channel.send("Sucessfully logged.");
   }
     
-  if(command === "uc" || "city" || "undead") {
+  
+  if(command === "uc") {
       let time = args[0];
       
       const embed = new Discord.RichEmbed()
@@ -143,7 +145,7 @@ client.on("message", async message => {
         .setAuthor(`Logged by ${message.author.username}`)
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
         .setColor()
-        .setFooter("All the chests have been looted")
+        .setFooter("All the chests have been looted!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
         .addField("Length", `${time} minutes`);
