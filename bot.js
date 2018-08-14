@@ -42,6 +42,9 @@ client.on("message", async message => {
   //ADMIN COMMANDS
     
   if(command === "ping") {
+    let allowedRole = message.guild.roles.find("name", "Clan Member");
+    if (!message.member.roles.has(allowedRole.id)
+        return message.channel.send("You are not a clan member, silly goose")
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
     const m = await message.channel.send("Ping?");
