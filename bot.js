@@ -73,22 +73,17 @@ client.on("message", async message => {
       let time = args[2];
       
       let color;
-      if(rarity === "red") {
+        if(rarity === "red") {
            color = config.red;
-      }
-      if(rarity === "blue") {
+      } if(rarity === "blue") {
     color = config.blue;
-      }
-      if(rarity === "white") {
+      } if(rarity === "white") {
     color = config.white;
-      }
-      if(rarity === "gold") {
+      } if(rarity === "gold") {
     color = config.gold;
-      }
-      if(rarity === "gray") {
+      } if(rarity === "gray") {
     color = config.gray;
-      }
-      if(rarity === "purple") {
+      } if(rarity === "purple") {
     color = config.purple;
       }
       
@@ -115,6 +110,20 @@ client.on("message", async message => {
       let drop = args[1];
       let time = args[2];
       
+      let color;
+        if(rarity === "red") {
+           color = config.red;
+      } if(rarity === "blue") {
+    color = config.blue;
+      } if(rarity === "white") {
+    color = config.white;
+      } if(rarity === "gold") {
+    color = config.gold;
+      } if(rarity === "gray") {
+    color = config.gray;
+      } if(rarity === "purple") {
+    color = config.purple;
+      }
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
       const embed = new Discord.RichEmbed()
