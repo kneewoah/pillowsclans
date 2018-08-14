@@ -6,7 +6,7 @@ client.on("ready", () => {
     console.log("I am ready!")
 });
 
-client.on("message", async message => {
+client.on('message', msg => {
   // This event will run on every single message received, from any channel or DM.
   
   // It's good practice to ignore other bots. This also makes your bot ignore itself
@@ -200,6 +200,36 @@ client.on("message", async message => {
       message.channel.send("<@280841703504478208>");
       message.channel.send("<@280841703504478208>");
       message.channel.send("<@280841703504478208>");
+  }
+  
+  if(command === "roll") {
+      const value = math.floor(math.random()*6)+1;
+      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️")
+          .then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫️🎲⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️⚫⚫⚫🎲");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫️🎲⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️⚫⚫⚫🎲");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit(`➡️ |   **Rolled**   | ⬅️ \n  🎲 ~ ${value}`);
+          }, 250)});
   }
 });
 
