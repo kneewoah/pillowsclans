@@ -85,7 +85,7 @@ client.on("message", async message => {
         .addField("Drop", `${dropUp}`)
         .addField("Length", `${time} minutes`);
       
-     client.channels.get(config.logChannel).send({embed})
+     client.channels.get(config.logChannel).send({embed});
      
      message.channel.send("Sucessfully logged.");
   }
@@ -108,7 +108,7 @@ client.on("message", async message => {
         .addField("Drop", `${dropUp}`)
         .addField("Length", `${time} minutes`);
       
-     client.channels.get(config.logChannel).send({embed})
+     client.channels.get(config.logChannel).send({embed});
      
      message.channel.send("Sucessfully logged.");
   }
@@ -132,7 +132,7 @@ client.on("message", async message => {
         .addField("Drop", `${dropUp}`)
         .addField("Length", `${time} minutes`);
       
-     client.channels.get(config.logChannel).send({embed})
+     client.channels.get(config.logChannel).send({embed});
      
      message.channel.send("Sucessfully logged.");
   }
@@ -151,7 +151,7 @@ client.on("message", async message => {
         .setTimestamp()
         .addField("Length", `${time} minutes`);
       
-     client.channels.get(config.logChannel).send({embed})
+     client.channels.get(config.logChannel).send({embed});
      
      message.channel.send("Sucessfully logged.");
   }
