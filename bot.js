@@ -70,15 +70,10 @@ client.on("message", async message => {
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`)
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor(if(rarity === "red") {
-                  "e81f09";
-                  } if(rarity === "blue") {
-                  "87cef2";
-                  } if(rarity === "white") {
-                  "ffffff";
-                  } if(rarity === "gold") {
-                  "e8d109";
-          })
+        if(rarity === "red") {
+            let color = "e81f09";
+        }
+        .setColor(color)
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
