@@ -81,6 +81,29 @@ client.on("message", async message => {
      
      message.channel.send("Sucessfully logged.");
   }
+    
+  if(command === "sk") {
+      let rarity = args[0];
+      let drop = args[1];
+      let time = args[2];
+      
+      const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
+      
+      const embed = new Discord.RichEmbed()
+        .setTitle("**Skeleton King**")
+        .setAuthor(`Logged by ${message.author.username}`)
+        // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+        .setColor()
+        .setFooter("The demonic Skeleton king has beeb slain!")
+        // Takes a Date object, defaults to current date.
+        .setTimestamp()
+        .addField("Length", `${time} minutes`)
+        .addField("Drop", `${dropUp}`);
+      
+     client.channels.get(config.logChannel).send({embed})
+     
+     message.channel.send("Sucessfully logged.");
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
