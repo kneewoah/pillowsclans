@@ -74,8 +74,8 @@ client.on("message", async message => {
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
-        .addField("Length", `${time} minutes`)
-        .addField("Drop", `${dropUp}`);
+        .addField("Drop", `${dropUp}`)
+        .addField("Length", `${time} minutes`);
       
      client.channels.get(config.logChannel).send({embed})
      
@@ -97,8 +97,8 @@ client.on("message", async message => {
         .setFooter("The demonic Skeleton King has been slain!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
-        .addField("Length", `${time} minutes`)
-        .addField("Drop", `${dropUp}`);
+        .addField("Drop", `${dropUp}`)
+        .addField("Length", `${time} minutes`);
       
      client.channels.get(config.logChannel).send({embed})
      
