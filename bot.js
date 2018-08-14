@@ -66,7 +66,8 @@ client.on("message", async message => {
       
       const color = config.rarity
       
-      const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1); 
+      const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
+      
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`, "")
