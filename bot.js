@@ -63,18 +63,18 @@ client.on("message", async message => {
       let rarity = args[0];
       
       if(rarity === "red") {
-          let color = red.config
-          message.channel.send("we got past ONE")
+          let color = red.config;
+          message.channel.send("we got past ONE");
           }
       if(rarity === "blue") {
-          let color = blue.config
-          message.channel.send("we got past TWO")
+          let color = blue.config;
+          message.channel.send("we got past TWO");
           }
       if(rarity === "white") {
-          let color = white.config
+          let color = white.config;
           }
       if(rarity === "gold") {
-          let color = gold.config
+          let color = gold.config;
           }
       
       let drop = args[1];
