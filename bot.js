@@ -201,11 +201,6 @@ client.on('message', msg => {
       message.channel.send("<@280841703504478208>");
       message.channel.send("<@280841703504478208>");
   }
-  
-  if(command === "roll") {
-      const value = math.floor(math.random()*6)+1;
-      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
-  }
 });
 
 // THIS  MUST  BE  THIS  WAY
