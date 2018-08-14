@@ -65,9 +65,8 @@ client.on("message", async message => {
   }
   
   if(command === "iw") {
-      let rarity = args[0];
-      let drop = args[1];
-      let time = args[2];
+      let drop = args[0];
+      let time = args[1];
       
       let dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
@@ -75,7 +74,7 @@ client.on("message", async message => {
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`, "")
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor(color)
+        .setColor()
         .setDescription("")
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
