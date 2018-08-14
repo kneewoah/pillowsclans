@@ -209,10 +209,9 @@ client.on("message", async message => {
   }
   
   if(command === "roll") {
-
+      const rolled = parseInt(math.floor(math.random()*6)+1);
       message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
-      math.floor(math.random()*6)+1
-      message.channel.send(`➡️ |   **Rolled**   | ⬅️ \n  🎲 ~ `);
+      message.channel.send(`➡️ |   **Rolled**   | ⬅️ \n  🎲 ~ ${rolled}`);
   }
 });
 
