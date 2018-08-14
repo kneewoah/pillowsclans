@@ -32,8 +32,12 @@ client.on("message", async message => {
 \n**${config.prefix}iw** <rarity color> <drop> <length (minutes)> - posts an Iron Wizard log in the specified events channel
 \n**${config.prefix}sk** <rarity color> <drop> <length (minutes)> - posts a Skeleton King log in the specified events channel
 \n__*Fun:*__
-\n**${config.prefix}say** - The bot parrots what you type`);
+\n**${config.prefix}say** - The bot parrots what you type - *coming soon*
+\n**${config.prefix}roll** <#> - Roll the specified number of dice - *coming soon*
+\n**${config.prefix}flip** - Flip a coin - *coming soon*`);
   }
+    
+  //ADMIN COMMANDS
     
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
@@ -42,6 +46,8 @@ client.on("message", async message => {
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   
+  //MODERATOR COMMANDS
+    
   if(command === "purge") {
     // This command removes all messages from all users in the channel, up to 100.
     
@@ -57,7 +63,9 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
-  
+    
+  //CLANS COMMANDS
+    
   if(command === "iw" || "wizard") {
       let rarity = args[0];
       let drop = args[1];
@@ -104,15 +112,8 @@ client.on("message", async message => {
      message.channel.send("Sucessfully logged.");
   }
     
-  if(command === "say") {
-    // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
-    // To get the "message" itself we join the `args` back into a string with spaces: 
-    const sayMessage = args.join(" ");
-    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-    message.delete().catch(O_o=>{}); 
-    // And we get the bot to say the thing: 
-    message.channel.send(sayMessage);
-  }
+  // FUN COMMANDS
+    
 });
 
 // THIS  MUST  BE  THIS  WAY
