@@ -65,10 +65,10 @@ client.on("message", async message => {
       let time = args[2];
       
       if(rarity === "red") {
-          const color = config.red
+          const color = "e81f09";
           }
       if(rarity === "blue") {
-          const color = "config.blue";
+          const color = "be0f7";
           }
       if(rarity === "white") {
           const color = config.white;
