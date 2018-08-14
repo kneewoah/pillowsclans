@@ -13,8 +13,7 @@ client.on("message", async message => {
   // and not get into a spam loop (we call that "botception").
   // Also good practice to ignore any message that does not start with our prefix, 
   // which is set in the configuration file.
-  if(message.author.bot || message.content.indexOf(config.prefix) !== 0) return;
-    
+  if(message.author.bot || message.content.indexOf(config.prefix) !== 0 || !message.member.roles.find("name", "Clan Member")) return;
   // Here we separate our "command" name, and our "arguments" for the command. 
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
   // command = say
