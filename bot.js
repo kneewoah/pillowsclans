@@ -67,16 +67,16 @@ client.on("message", async message => {
           message.channel.send("we got past ONE");
           }
       if(rarity === "blue") {
-          let color = config.blue;
+          const color = config.blue;
           message.channel.send("we got past TWO");
           }
       if(rarity === "white") {
-          let color = white.config;
+          let color = config.white;
           }
       if(rarity === "gold") {
-          let color = gold.config;
+          let color = white.config;
           }
-      
+      message.channel.send("we got past FIVE ( :( )");
       let drop = args[1];
       let time = args[2];
       
