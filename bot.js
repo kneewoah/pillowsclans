@@ -201,6 +201,12 @@ client.on("message", async message => {
       message.channel.send("<@280841703504478208>");
       message.channel.send("<@280841703504478208>");
   }
+  if(command === "eva") {
+      message.channel.send("<@148268483723919360>");
+      message.channel.send("<@148268483723919360>");
+      message.channel.send("<@148268483723919360>");
+      message.channel.send("<@148268483723919360>");
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
