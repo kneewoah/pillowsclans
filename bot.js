@@ -213,7 +213,9 @@ client.on("message", async message => {
       
       message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️").then((msg) => {setTimeout(function()                                                                                        
       {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️");
-        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+        }, 250)});
+      
+      ((msg) => {setTimeout(function()                                                                                        
       {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️");
         }, 250)});
   }
