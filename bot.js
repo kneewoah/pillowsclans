@@ -64,26 +64,21 @@ client.on("message", async message => {
       let drop = args[1];
       let time = args[2];
       
-      if(rarity === "red") {
-      const color = "e81f09";
-          }
-      if(rarity === "blue") {
-      const color = "87cef2";
-          }
-      if(rarity === "white") {
-      const color = "ffffff";
-          }
-      if(rarity === "gold") {
-      const color = "e8d109";
-          }
-      
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`)
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor(`0x${color}`)
+        .setColor(if(rarity === "red") {
+                  "e81f09";
+                  } if(rarity === "blue") {
+                  "87cef2";
+                  } if(rarity === "white") {
+                  "ffffff";
+                  } if(rarity === "gold") {
+                  "e8d109";
+          })
         .setFooter("The mighty Iron Wizard has fallen!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
