@@ -204,32 +204,7 @@ client.on('message', msg => {
   
   if(command === "roll") {
       const value = math.floor(math.random()*6)+1;
-      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️")
-          .then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫️🎲⚫️⚫️");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️⚫⚫⚫🎲");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫️🎲⚫️⚫️");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️⚫⚫⚫🎲");
-          }, 250)}).then((msg)=>{setTimeout(function()
-          {msg.edit(`➡️ |   **Rolled**   | ⬅️ \n  🎲 ~ ${value}`);
-          }, 250)});
+      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
   }
 });
 
