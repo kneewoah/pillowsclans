@@ -209,7 +209,7 @@ client.on("message", async message => {
   }
   
   if(command === "roll") {
-      let rolled = math.floor(math.random()*6)+1 ;
+      let rolled = function(math.floor(math.random()*6)+1);
       message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
   }
 });
