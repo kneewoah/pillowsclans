@@ -211,8 +211,33 @@ client.on("message", async message => {
   if(command === "roll") {
       let rolled = "6"
       
-      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️").then((msg) => {setTimeout(function() {msg.edit(`➡️ |   **Rolled**   | ⬅️\n🔻  🎲 ~ ${rolled} 🔻`);
-        }, 2000)});
+      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️").then((msg) => {setTimeout(function()                                                                                       
+      {msg.edit()
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫🎲⚫️⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫🎲⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫🎲⚫️⚫️⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫🎲⚫️⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫🎲⚫️")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲")
+        }, 250)}).then((msg) => {setTimeout(function()                                                                                        
+      {msg.edit(`🔻 |   **Rolled**   | 🔻\n➡️   🎲 ➖ ${rolled}   ⬅️`)
+        }, 250)});
   }
 });
 
