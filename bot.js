@@ -155,7 +155,7 @@ client.on("message", async message => {
         .setTitle("**Capture Point**")
         .setAuthor(`Logged by ${message.author.username}`)
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-        .setColor()
+        .setColor(color)
         .setFooter(`${message.author.username} has captured the point!`)
         // Takes a Date object, defaults to current date.
         .setTimestamp()
