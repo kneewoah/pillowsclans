@@ -214,29 +214,29 @@ client.on("message", async message => {
       message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️").then((msg) => {setTimeout(function()                                                                                       
       {msg.edit()
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫🎲⚫️⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫🎲⚫️⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫🎲⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫🎲⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫🎲⚫️⚫️⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫🎲⚫️⚫️⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫🎲⚫️⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫🎲⚫️⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫🎲⚫️")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫🎲⚫️");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲")
+      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲");
         }, 250)}).then((msg) => {setTimeout(function()                                                                                        
-      {msg.edit(`🔻 |   **Rolled**   | 🔻\n➡️   🎲 ➖ ${rolled}   ⬅️`)
+      {msg.edit(`🔻 |   **Rolled**   | 🔻\n➡️   🎲 ➖ ${rolled}   ⬅️`);
         }, 250)});
   }
 });
