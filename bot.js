@@ -162,7 +162,8 @@ client.on("message", async message => {
       message.channel.send(<@219506178680553473>);
       message.channel.send(<@219506178680553473>);
       message.channel.send(<@219506178680553473>);
-      message.channel.send(<@219506178680553473>);       
+      message.channel.send(<@219506178680553473>);
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
