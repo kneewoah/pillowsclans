@@ -209,9 +209,10 @@ client.on("message", async message => {
   }
   
   if(command === "roll") {
-      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
+      let rolled = "6"
       
-      message.channel.send(`➡️ |   **Rolled**   | ⬅️ \n  🎲 ~ $ #`);
+      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️").then((msg) => {setTimeout(function() {msg.edit(`➡️ |   **Rolled**   | ⬅️\n🔻  🎲 ~ ${rolled} 🔻`);
+        }, 2000)});
   }
 });
 
