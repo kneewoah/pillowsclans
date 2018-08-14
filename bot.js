@@ -215,9 +215,9 @@ client.on("message", async message => {
       {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️");
         }, 250)});
       
-      ((msg) => {setTimeout(function()                                                                                        
-      {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️");
-        }, 250)});
+      setTimeout(function()                                                                                        
+      {message.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️");
+        }, 250)
   }
 });
 
