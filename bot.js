@@ -31,6 +31,8 @@ client.on("message", async message => {
 \n__*Clans:*__
 \n**${config.prefix}iw** <rarity color> <drop> <length (minutes)> - posts an Iron Wizard log in the specified events channel
 \n**${config.prefix}sk** <rarity color> <drop> <length (minutes)> - posts a Skeleton King log in the specified events channel
+\n**${config.prefix}cp** <rarity color> <drop> <length (minutes)> - posts a Capture Point log in the specified events channel
+\n**${config.prefix}uc** <length (minutes)> - posts an Undead City log in the specified events channel
 \n__*Fun:*__
 \n**${config.prefix}say** - The bot parrots what you type - *coming soon*
 \n**${config.prefix}roll** <#> - Roll the specified number of dice - *coming soon*
