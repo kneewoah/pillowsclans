@@ -66,9 +66,9 @@ client.on("message", async message => {
       
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
         
-      const color = if (rarity === "red"; "blue"; "white"; "gold") {
-                       "e81f09"; "87cef2"; "ffffff"; "e8d109";
-                    }
+      const color = if(rarity === "red") {
+                        "red";
+                    {
       
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
