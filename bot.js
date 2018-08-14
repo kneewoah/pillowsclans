@@ -73,7 +73,7 @@ client.on("message", async message => {
       let time = args[2];
       
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
-          
+      
       const embed = new Discord.RichEmbed()
         .setTitle("**Iron Wizard**")
         .setAuthor(`Logged by ${message.author.username}`)
