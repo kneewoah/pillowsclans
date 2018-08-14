@@ -23,7 +23,7 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
     
   if(command === "help") {
-    	message.reply(`Here is a list of commands:
+    	message.reply(`here is the list of commands:
 \n__*Admin:*__
 \n**${config.prefix}ping** - Calculates latency
 \n__*Moderation:*__
