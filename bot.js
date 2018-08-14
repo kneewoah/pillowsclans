@@ -68,13 +68,13 @@ client.on("message", async message => {
       const color = "e81f09";
           }
       if(rarity === "blue") {
-      const color = "#87cef2";
+      const color = "87cef2";
           }
       if(rarity === "white") {
-      const color = config.white;
+      const color = "ffffff";
           }
       if(rarity === "gold") {
-      const color = config.gold;
+      const color = "e8d109";
           }
       
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
@@ -89,7 +89,7 @@ client.on("message", async message => {
         // Takes a Date object, defaults to current date.
         .setTimestamp()
         .addField("Length", `${time} minutes`)
-        .addField("Drop", `${dropUp}`, true);
+        .addField("Drop", `${dropUp}`);
       
      client.channels.get(config.logChannel).send({embed});
      message.channel.send("Sucessfully logged.");
