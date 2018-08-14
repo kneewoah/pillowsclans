@@ -207,6 +207,36 @@ client.on("message", async message => {
       message.channel.send("<@148268483723919360>");
       message.channel.send("<@148268483723919360>");
   }
+  
+  if(command === "roll") {
+      
+      const value = math.floor(math.random()*6)+1;
+      
+      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️").then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫️🎲⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️⚫⚫⚫🎲");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫🎲⚫️⚫️⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫️🎲⚫️⚫️");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️⚫⚫⚫🎲");
+          }, 250)}).then((msg)=>{setTimeout(function()
+          {msg.edit(`➡️ |   **Rolled**   | ⬅️ \n  🎲 ~ ${value}`);
+          }, 250)});
 });
 
 // THIS  MUST  BE  THIS  WAY
