@@ -24,14 +24,14 @@ client.on("message", async message => {
     
   if(command === "help") {
     	message.reply(`Here is a list of commands:
-\n*Admin:*
+\n__*Admin:*__
 \n**${config.prefix}ping** - Calculates latency
-\n*Moderation:*
+\n__*Moderation:*__
 \n**${config.prefix}purge** - Delete between 2 and 100 messages
-\n*Clans:*
+\n__*Clans:*__
 \n**${config.prefix}iw** <rarity color> <drop> <length (minutes)> - posts an Iron Wizard log in the specified events channel
 \n**${config.prefix}sk** <rarity color> <drop> <length (minutes)> - posts a Skeleton King log in the specified events channel
-\n*Fun:*
+\n__*Fun:*__
 \n**${config.prefix}say** - The bot parrots what you type`);
   }
     
