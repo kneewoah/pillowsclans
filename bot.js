@@ -42,15 +42,12 @@ client.on("message", async message => {
   //ADMIN COMMANDS
     
   if(command === "ping") {
-    if (message.member.roles.has("459896776174993409") {
-        // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
-        // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
-        const m = await message.channel.send("Ping?");
-        m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-    } else { 
-        message.reply("You are not a clan member, silly goose");
-    }
+      // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
+      // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
+      const m = await message.channel.send("Ping?");
+      m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
+    
   //MODERATOR COMMANDS
     
   if(command === "purge") {
