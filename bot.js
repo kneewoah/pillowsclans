@@ -94,7 +94,7 @@ client.on("message", async message => {
         .setAuthor(`Logged by ${message.author.username}`)
         // Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
         .setColor()
-        .setFooter("The demonic Skeleton king has beeb slain!")
+        .setFooter("The demonic Skeleton King has been slain!")
         // Takes a Date object, defaults to current date.
         .setTimestamp()
         .addField("Length", `${time} minutes`)
