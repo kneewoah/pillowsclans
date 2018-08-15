@@ -55,13 +55,13 @@ client.on("message", async message => {
       let rb = message.mentions.members.first();
       let roleID = message.guild.roles.find("name", "Muted").id;
       
-      if(!message.member.roles.find("name", "Muted")) {
-         message.reply(rb + " isn't even muted you mormon.");
+      if(message.member.roles.find("name", "Muted")) {
+         message.reply(rb + " has been unmuted.");
+         rb.removeRole(roleID);
       } else if(message.author.id === rb.id) {
          return message.reply("if you were muted you wouldnt be able to type this command. And if you are muted but CAN TYPE, then you're ADMIN and you cna LITERALLY EDIT YOUR ROLES");
       } else {
-         message.reply(rb + " has been unmuted.");
-         rb.removeRole(roleID);
+         message.reply(rb + " isn't even muted you mormon.");
       }
   }
     
