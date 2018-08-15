@@ -208,7 +208,8 @@ if(command === "ping") {
     
      // Spam Blue
      if(command === "blue") {
-         message.channel.send("<@219506178680553473>").repeat(4);
+         const blue = message.channel.send("<@219506178680553473>");
+         blue.repeat(4);
      }
     
      // Spam Coco
