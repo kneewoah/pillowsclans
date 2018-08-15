@@ -43,7 +43,7 @@ client.on("message", async message => {
       
       if(message.member.roles.find("name", "Muted")) {
          message.reply(rb + " is already muted you mormon.");
-      } else if(message.author === rb) {
+      } else if(message.author === message.mentions.members.first()) {
          return message.reply("YOU'RE FUCKING RETARDED");
       } else {
          message.reply(rb + " has been muted.");
