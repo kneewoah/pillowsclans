@@ -25,7 +25,7 @@ if(command === "help") {
 \n**${config.prefix}kick <rulebreaker>** - Kick an annoying person from the server
 \n**${config.prefix}ban <rulebreaker>** - Ban a randie
 \n__*Fun:*__
-\n**${config.prefix}say** - The bot parrots what you type - *coming soon*
+\n**${config.prefix}say** - The bot parrots what you type
 \n**${config.prefix}roll** <# of sides> - Roll a die!
 \n**${config.prefix}ping** - Calculates latency
 \n**${config.prefix}flip** - Flip a coin - *coming soon*
