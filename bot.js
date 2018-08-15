@@ -41,11 +41,11 @@ client.on("message", async message => {
       let rb = message.mentions.members.first();
       let roleID = message.guild.roles.find("name", "Muted").id;
       message.reply(rb + " <- rb");
-      message.reply(message.author.mention + " <- MAM");
+      message.reply(message.author + " <- MA");
       
       if(message.member.roles.find("name", "Muted")) {
          message.reply(rb + " is already muted you mormon.");
-      } else if(message.author.mention === rb) {
+      } else if(message.author === rb) {
          message.reply("YOU'RE FUCKING RETARDED");
       } else {
          message.reply(rb + " has been muted.");
