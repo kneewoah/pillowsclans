@@ -41,7 +41,7 @@ client.on("message", async message => {
     let role = message.guild.roles.find("name", "Muted");
     let rb = args[0];
     
-    message.channel.send(role)
+    message.channel.send(role);
    
   }
     
