@@ -40,6 +40,8 @@ client.on("message", async message => {
   if(command === "mute") {
       let rb = message.mentions.members.first();
       let roleID = message.guild.roles.find("name", "Muted").id;
+      message.reply(rb + " <- rb");
+      message.reply(message.author.mention + " <- MAM");
       
       if(message.member.roles.find("name", "Muted")) {
          message.reply(rb + " is already muted you mormon.");
