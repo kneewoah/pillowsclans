@@ -44,7 +44,6 @@ client.on("message", async message => {
          message.reply(" " + message.author + " is already muted you mormon.");
       } else {
          message.reply(rb + "i shall moot them");
-         rb.addRole(message.guilds.roles.find("name", "Muted");
       }
   }
     
