@@ -210,19 +210,13 @@ client.on("message", async message => {
   
   if(command === "roll") {
       
-      function random() {
-          return math.floor(math.Random()*6)+1;
-      }
-      
-      var rainbow = random();
-      
       message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
           .then((msg)=>{setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
-          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **${rainbow}** ➖   |     ⬅️`);
+          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **${return math.floor(math.Random()*6)+1}** ➖   |     ⬅️`);
           }, 1000)}
           msg.edit("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | ⚫⚫⚫⚫🎲  | ⬅️");
           }, 1000)}
