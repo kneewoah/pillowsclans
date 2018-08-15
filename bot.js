@@ -210,7 +210,7 @@ client.on("message", async message => {
   
   if(command === "roll") {
       
-      const rainbow = "9"
+      const rainbow = math.floor(math.random()*6)+1
       
       message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
           .then((msg)=>{setTimeout(function() {
