@@ -212,7 +212,8 @@ client.on("message", async message => {
       let rolled = "6"
      
       const m = await message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
-      m.edit("bob");
+      const n = await m.edit("bob");
+      const o = await n.edit("joe");
       
       
   }
