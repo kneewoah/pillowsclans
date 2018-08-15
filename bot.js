@@ -38,7 +38,7 @@ client.on("message", async message => {
     
   //MODERATOR COMMANDS
   if(command === "mute") {
-    const rb = args[0];
+    let rb = args[0];
     message.channel.send(rb);
   }
     
