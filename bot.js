@@ -214,7 +214,7 @@ client.on("message", async message => {
           return math.floor(math.Random()*6)+1;
       }
       
-      const rainbow = random();
+      var rainbow = random();
       
       message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
           .then((msg)=>{setTimeout(function() {
