@@ -5,7 +5,6 @@ const config = require("./config.json");
 
 // ON READY
 client.on("ready", () => {
-  client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
 // GUILDS
