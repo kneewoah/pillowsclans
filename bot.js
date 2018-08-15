@@ -213,8 +213,10 @@ client.on("message", async message => {
      
       
       message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");   
-      let msgID = client.lastMessage // Makes it so the bot always edits the correct message
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️");
+      
+      const msgID = client.lastMessage // Makes it so the bot always edits the correct message
+      
+      client.lastMessage.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️");
       msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️");
       msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫️⚫⚫🎲⚫️⚫️");
       msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫️");
