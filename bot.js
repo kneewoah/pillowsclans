@@ -208,18 +208,26 @@ if(command === "ping") {
     
      // Spam Blue
      if(command === "blue") {
-         const blue = message.channel.send("<@219506178680553473>");
-         blue.repeat(4);
+         message.channel.send("<@219506178680553473>");
+         message.channel.send("<@219506178680553473>");
+         message.channel.send("<@219506178680553473>");
+         message.channel.send("<@219506178680553473>");
      }
     
      // Spam Coco
      if(command === "coco") {
-         message.channel.send("<@280841703504478208>").repeat(4);
+         message.channel.send("<@280841703504478208>");
+         message.channel.send("<@280841703504478208>");
+         message.channel.send("<@280841703504478208>");
+         message.channel.send("<@280841703504478208>");
      }
     
      // Spam Eva
      if(command === "eva") {
-         message.channel.send("<@148268483723919360>").repeat(4);
+         message.channel.send("<@148268483723919360>");
+         message.channel.send("<@148268483723919360>");
+         message.channel.send("<@148268483723919360>");
+         message.channel.send("<@148268483723919360>");
      }
   
      // Dice
