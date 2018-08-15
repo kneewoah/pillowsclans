@@ -38,10 +38,12 @@ client.on("message", async message => {
     
   // MODERATOR COMMANDS
   if(command === "mute") {
-     let rb = args[0];
-     let role = message.guild.roles.find("name", "Muted");
-     message.channel.send(role);
-   
+      let roleID = message.guilds.find.("name, Muted").id
+      if(message.member.roles.has(roleID)) {
+         message.reply(" " + message.author + " is already muted you mormon.");
+      } else {
+         message.reply("i shall moot them");
+      }
   }
     
     
