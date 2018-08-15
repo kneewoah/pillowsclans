@@ -42,6 +42,8 @@ client.on("message", async message => {
       let roleID = message.guild.roles.find("name", "Muted").id;
       if(message.member.roles.find("name", "Muted")) {
          message.reply(rb + " is already muted you mormon.");
+      } else if(message.author === rb) {
+         message.reply("YOU'RE FUCKING RETARDED")
       } else {
          message.reply(rb + " has been muted.");
          rb.addRole(roleID);
