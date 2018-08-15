@@ -37,6 +37,8 @@ client.on("message", async message => {
   }
     
   // MODERATOR COMMANDS
+  if(message.author.roles.find("name", "Moderator") || message.author.roles.find("name", "Discord Admin") {
+     
   if(command === "mute") {
       let rb = message.mentions.members.first();
       let roleID = message.guild.roles.find("name", "Muted").id;
@@ -61,10 +63,10 @@ client.on("message", async message => {
          message.reply(rb + " isn't even muted you mormon.");
       } else {
          message.reply(rb + " has been unmuted.");
-         rb.removeRole(roleID);
+        rb.removeRole(roleID);
       }
   }
-    
+
     
   if(command === "purge") {
     const deleteCount = parseInt(args[0], 10);
@@ -76,7 +78,7 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
-    
+}
   //CLANS COMMANDS
     
   if(command === "iw") {
