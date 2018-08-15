@@ -209,14 +209,14 @@ client.on("message", async message => {
   }
   
   if(command === "roll") {
-      let rolled = "6"
+      
       message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
           .then((msg)=>{setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
-          msg.edit("🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **6** ➖   |     ⬅️");
+          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **${math.floor(math.Random()*6)+1}** ➖   |     ⬅️`);
           }, 1000)}
           msg.edit("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | ⚫⚫⚫⚫🎲  | ⬅️");
           }, 1000)}
