@@ -212,7 +212,13 @@ client.on("message", async message => {
       let rolled = "6"
       message.channel.send("➡️ | **Rolling**... | ⬅️\n 🎲⚫️⚫️⚫️⚫ ")
           .then((msg)=>{setTimeout(function() {
+          {setTimeout(function() {
+          {setTimeout(function() {
           msg.edit("one");
+          }, 1000)}
+          msg.edit("two");
+          }, 1000)}
+          msg.edit("three");
           }, 1000)});
       
       
