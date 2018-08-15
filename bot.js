@@ -37,6 +37,11 @@ client.on("message", async message => {
   }
     
   //MODERATOR COMMANDS
+  if(command === "mute") {
+    const rb = message.mentions.members.first()
+    message.channel.send(rb)
+  }
+    
     
   if(command === "purge") {
     const deleteCount = parseInt(args[0], 10);
