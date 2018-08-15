@@ -210,14 +210,17 @@ client.on("message", async message => {
   
   if(command === "roll") {
       let rolled = "6"
+      message.channel.send("➡️ | **Rolling**... | ⬅️\n 🎲⚫️⚫️⚫️⚫ ")
+          .then((msg)=>{setTimeout(function() {
+          msg.edit("one");
+          }, 1000)});
       
- 
-      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
-      setTimeout
       
-      function edit1() {
       
-      }
+      
+      
+      
+      
       
   }
 });
