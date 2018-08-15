@@ -44,7 +44,8 @@ client.on("message", async message => {
          message.reply(rb + " is already muted you mormon.");
       } else {
          message.reply(rb + " has been muted.");
-      }  rb.addRole(roleID)
+         rb.addRole(roleID);
+      }
   }
     
     
