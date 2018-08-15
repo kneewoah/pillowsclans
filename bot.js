@@ -8,6 +8,7 @@ client.on("ready", () => {
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
+// GUILDS
 client.on("guildCreate", guild => {
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
