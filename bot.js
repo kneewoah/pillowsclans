@@ -211,24 +211,10 @@ client.on("message", async message => {
   if(command === "roll") {
       let rolled = "6"
      
+      const m = await message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
+      m.edit("bob");
       
-      message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");   
       
-      const msgID = client.lastMessage // Makes it so the bot always edits the correct message
-      
-      client.lastMessage.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫️⚫⚫🎲⚫️⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");   
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫️🎲⚫️⚫️⚫️⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫️🎲⚫️⚫️⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫️⚫⚫🎲⚫️⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫️🎲⚫️");
-      msgID.edit("➡️ | **Rolling**... | ⬅️\n⚫⚫⚫⚫⚫🎲");
-      
-      msgID.edit(`🔻 |   **Rolled**   | 🔻\n➡️   🎲 ➖ ${rolled}   ⬅️`);
   }
 });
 
