@@ -214,7 +214,7 @@ client.on("message", async message => {
           return math.floor(math.random()*number)+1;
       }
       
-      const rainbow = roll(6);
+      const roll = Math.floor(Math.random() * 6) + 1;
       
       message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
           .then((msg)=>{setTimeout(function() {
@@ -222,7 +222,7 @@ client.on("message", async message => {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
-          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **${rainbow}** ➖   |     ⬅️`);
+          msg.edit("🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **" + roll + "** ➖   |     ⬅️");
           }, 1000)}
           msg.edit("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | ⚫⚫⚫⚫🎲  | ⬅️");
           }, 1000)}
