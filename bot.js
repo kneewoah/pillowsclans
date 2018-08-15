@@ -7,17 +7,8 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-  // This event will run on every single message received, from any channel or DM.
-  
-  // It's good practice to ignore other bots. This also makes your bot ignore itself
-  // and not get into a spam loop (we call that "botception").
-  // Also good practice to ignore any message that does not start with our prefix, 
-  // which is set in the configuration file.
   if(message.author.bot || message.content.indexOf(config.prefix) !== 0 || !message.member.roles.find("name", "Clan Member")) return;
-  // Here we separate our "command" name, and our "arguments" for the command. 
-  // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
-  // command = say
-  // args = ["Is", "this", "the", "real", "life?"]
+ 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
     
@@ -41,8 +32,6 @@ client.on("message", async message => {
   //ADMIN COMMANDS
     
   if(command === "ping") {
-      // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
-      // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
       const m = await message.channel.send("Ping?");
       m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
@@ -50,16 +39,11 @@ client.on("message", async message => {
   //MODERATOR COMMANDS
     
   if(command === "purge") {
-    // This command removes all messages from all users in the channel, up to 100.
-    
-    // get the delete count, as an actual number.
     const deleteCount = parseInt(args[0], 10);
     
-    // Ooooh nice, combined conditions. <3
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
       return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
     
-    // So we get our messages, and delete them. Simple enough, right?
     const fetched = await message.channel.fetchMessages({limit: deleteCount});
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
@@ -74,14 +58,14 @@ client.on("message", async message => {
       
       let color;
         if(rarity === "red") {
-           color = config.red;
-      } if(rarity === "blue") {
-    color = config.blue;
-      } if(rarity === "white") {
-    color = config.white;
-      } if(rarity === "gold") {
-    color = config.gold;
-      }
+             color = config.red;
+        } if(rarity === "blue") {
+             color = config.blue;
+        } if(rarity === "white") {
+             color = config.white;
+        } if(rarity === "gold") {
+             color = config.gold;
+        }
       
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
@@ -95,7 +79,6 @@ client.on("message", async message => {
         .setTimestamp()
         .addField("Drop", `${dropUp}`)
         .addField("Length", `${time} minutes`);
-      
      client.channels.get(config.logChannel).send({embed});
      
      message.channel.send("Sucessfully logged.");
@@ -109,13 +92,13 @@ client.on("message", async message => {
       let color;
         if(rarity === "red") {
            color = config.red;
-      } if(rarity === "blue") {
-    color = config.blue;
-      } if(rarity === "white") {
-    color = config.white;
-      } if(rarity === "gold") {
-    color = config.gold;
-      }
+        } if(rarity === "blue") {
+           color = config.blue;
+        } if(rarity === "white") {
+           color = config.white;
+        } if(rarity === "gold") {
+           color = config.gold;
+        }
       
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
@@ -134,7 +117,6 @@ client.on("message", async message => {
      
      message.channel.send("Sucessfully logged.");
   }
- 
     
   if(command === "cp") {
       let rarity = args[0];
@@ -144,10 +126,10 @@ client.on("message", async message => {
       
       let color;
         if(rarity === "gray") {
-    color = config.gray;
-      } if(rarity === "purple") {
-    color = config.purple;
-      }
+            color = config.gray;
+        } if(rarity === "purple") {
+            color = config.purple;
+        }
 
       const dropUp = drop.charAt(0).toUpperCase() + drop.slice(1);
       
@@ -228,14 +210,6 @@ client.on("message", async message => {
           }, 1000)}
           msg.edit("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | ⚫🎲⚫️⚫️⚫️  | ⬅️");
           }, 1000)});
-      
-      
-      
-      
-      
-      
-      
-      
   }
 });
 
