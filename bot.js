@@ -39,7 +39,6 @@ client.on("message", async message => {
   // MODERATOR COMMANDS
   if(command === "mute") {
       let rb = message.mentions.members.first();
-      let test = message.guilds.roles.find("name", "Muted").id;
       
       if(message.member.roles.find("name", "Muted")) {
          message.reply(" " + message.author + " is already muted you mormon.");
