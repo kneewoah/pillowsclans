@@ -214,6 +214,16 @@ client.on("message", async message => {
       const m = await message.channel.send("➡️ | **Rolling**... | ⬅️\n🎲⚫️⚫️⚫️⚫️⚫️");
       const n = await m.edit("bob");
       const o = await n.edit("joe");
+      const p = await o.edit("fred");
+      const q = await p.edit("bob");
+      const r = await q.edit("joe");
+      const s = await r.edit("fred");
+      const t = await s.edit("bob");
+      const u = await t.edit("joe");
+      const v = await u.edit("fred");
+      const w = await v.edit("bob");
+      const x = await w.edit("joe");
+      const y = await x.edit("fred");
       
       
   }
