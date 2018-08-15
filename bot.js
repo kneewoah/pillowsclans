@@ -41,10 +41,10 @@ client.on("message", async message => {
       let rb = message.mentions.members.first();
       let roleID = message.guild.roles.find("name", "Muted").id;
       
-      if(rb.roles.find("name", "Muted")) {
-         message.reply(rb + " is already muted you mormon.");
-      } else if(message.author.id === rb.id) {
+      if(message.author.id === rb.id) {
          return message.reply("YOU'RE FUCKING RETARDED");
+      } else if(rb.roles.find("name", "Muted")) {
+         message.reply(rb + " is already muted you mormon.");
       } else {
          message.reply(rb + " has been muted.");
          rb.addRole(roleID);
