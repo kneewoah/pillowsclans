@@ -38,14 +38,8 @@ client.on("message", async message => {
     
   // MODERATOR COMMANDS
   if(command === "mute") {
-      let rb = message.mentions.members.first();
-   
-      if(message.member.roles.find("name", "Muted")) {
-         message.reply(" " + message.author + " is already muted you mormon.");
-      } else {
-         message.reply(member + "i shall moot them");
-         rb.addRole(message.member.roles.find("name", "Muted"))
-      }
+      let poop = message.member.roles.find("name", "Muted");
+      message.reply(poop);
   }
     
     
