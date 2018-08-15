@@ -39,7 +39,7 @@ client.on("message", async message => {
   //MODERATOR COMMANDS
   if(command === "mute") {
     let rb = args[0];
-    message.channel.send(message.author.mention + " muted " + rb + ".");
+    message.channel.send(message.author + " muted " + rb + ".");
   }
     
     
