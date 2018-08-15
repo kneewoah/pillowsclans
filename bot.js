@@ -9,6 +9,7 @@ client.on("ready", () => {
 client.on("message", async message => {
   if(message.author.bot || message.content.indexOf(config.prefix) !== 0 || !message.member.roles.find("name", "Clan Member")) return;
  
+  const author = message.author
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
     
@@ -29,17 +30,22 @@ client.on("message", async message => {
 \n**${config.prefix}flip** - Flip a coin - *coming soon*`);
   }
     
-  //ADMIN COMMANDS
+  // ADMIN COMMANDS
     
   if(command === "ping") {
       const m = await message.channel.send("Ping?");
       m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
     
-  //MODERATOR COMMANDS
+  // MODERATOR COMMANDS
   if(command === "mute") {
     let rb = args[0];
-    message.channel.send(message.author + " muted " + rb + ".");
+      
+    if(message.member.roles.has("name", "Muted") {
+       message.reply(rb + " is already muted you mormon.");
+    } else {
+       message.channel.send(rb + " was muted by " + author + ".");
+    }
   }
     
     
