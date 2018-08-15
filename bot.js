@@ -39,7 +39,7 @@ client.on("message", async message => {
   // MODERATOR COMMANDS
   if(command === "mute") {
     let role = message.guild.roles.find("name", "Muted");
-    let rb = message.mentions.members.first();
+    let rb = args[0];
     
     message.channel.send(role)
    
