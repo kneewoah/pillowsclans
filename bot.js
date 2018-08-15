@@ -210,13 +210,15 @@ client.on("message", async message => {
   
   if(command === "roll") {
       
+      const rainbow = "9"
+      
       message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
           .then((msg)=>{setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
-          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **9** ➖   |     ⬅️`);
+          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **${rainbow}** ➖   |     ⬅️`);
           }, 1000)}
           msg.edit("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | ⚫⚫⚫⚫🎲  | ⬅️");
           }, 1000)}
