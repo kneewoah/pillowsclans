@@ -211,7 +211,7 @@ client.on("message", async message => {
   if(command === "roll") {
       
       function roll(number) {
-          math.floor(math.random()*number)+1;
+          return math.floor(math.random()*number)+1;
       }
       
       const rainbow = roll(6)
