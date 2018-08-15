@@ -5,7 +5,16 @@ const config = require("./config.json");
 
 // ON READY
 client.on("ready", () => {
-    console.log("I am ready!")
+  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+});
+
+client.on("guildCreate", guild => {
+  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+});
+
+client.on("guildDelete", guild => {
+  client.user.setActivity(`Serving ${client.guilds.size} servers`);
+});
 });
 
 // ON MESSAGE
