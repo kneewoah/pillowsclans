@@ -37,7 +37,7 @@ client.on("message", async message => {
   }
     
   // MODERATOR COMMANDS
- if(!message.member.roles.find("name", "Discord Admin") || !message.member.roles.find("name", "Moderator")) return;
+ if(message.member.roles.find("name", "Discord Admin") || message.member.roles.find("name", "Moderator")) {
     
   if(command === "mute") {
       let rb = message.mentions.members.first();
@@ -78,6 +78,7 @@ client.on("message", async message => {
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
+ }
 
   //CLANS COMMANDS
     
