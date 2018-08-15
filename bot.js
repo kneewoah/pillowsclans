@@ -5,12 +5,12 @@ const config = require("./config.json");
 
 // ON READY
 client.on("ready", () => {
-  message.config.ownerID.send("online");
+  
 });
 
 // GUILDS
 client.on("guildCreate", guild => {
-
+  config.ownerID.send(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
 });
 
 client.on("guildDelete", guild => {
