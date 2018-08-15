@@ -9,7 +9,7 @@ client.on("ready", () => {
 client.on("message", async message => {
   if(message.author.bot || message.content.indexOf(config.prefix) !== 0 || !message.member.roles.find("name", "Clan Member")) return;
  
-  const author = message.author
+  const author = message.author;
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
     
