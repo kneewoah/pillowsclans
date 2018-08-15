@@ -43,7 +43,7 @@ client.on("message", async message => {
       if(message.member.roles.find("name", "Muted")) {
          message.reply(" " + message.author + " is already muted you mormon.");
       } else {
-         message.reply(rb + "i shall moot them");
+         message.send.channel(rb + " has been muted by " message.author);
       }
   }
     
