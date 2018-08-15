@@ -216,7 +216,7 @@ client.on("message", async message => {
           {setTimeout(function() {
           {setTimeout(function() {
           {setTimeout(function() {
-          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **${return math.floor(math.Random()*6)+1}** ➖   |     ⬅️`);
+          msg.edit(`🔹      |     **Rolled**     |      🔹\n**==================**\n➡️      |   ➖ **9** ➖   |     ⬅️`);
           }, 1000)}
           msg.edit("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | ⚫⚫⚫⚫🎲  | ⬅️");
           }, 1000)}
