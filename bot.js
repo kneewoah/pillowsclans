@@ -250,8 +250,14 @@ if(command === "ping") {
              msg.edit("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | ⚫🎲⚫️⚫️⚫️  | ⬅️");
              }, 1000)});
      }
+    
+     // Say
+     if(command === "say") {
+         const sayMessage = args.join(" ");
+         message.delete().catch(O_o=>{}); 
+         message.channel.send(sayMessage);
   //filler
 });
 
-// THIS  MUST  BE  THIS  WAY
+// Token from Heroku
 client.login(process.env.BOT_TOKEN);
