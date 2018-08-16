@@ -56,7 +56,7 @@ if(command === "ping") {
  
     
  // MODERATOR COMMANDS
-if(message.member.hasPermission("KICK_MEMBERS" || "MUTE_MEMBERS" || "MANAGE_MESSAGES" || "ADMINISTRATOR")) {
+if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR")) {
   
      // Mute
      if(command === "mute") {
@@ -73,7 +73,8 @@ if(message.member.hasPermission("KICK_MEMBERS" || "MUTE_MEMBERS" || "MANAGE_MESS
          }
        
          let rb = message.mentions.members.first();
-         if(!rb) message.reply("you need to mention a user") return;
+         if(!rb) message.reply("you need to mention a user")
+       
          let roleID = message.guild.roles.find("name", "Muted").id;
   
        
