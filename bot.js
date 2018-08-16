@@ -25,7 +25,8 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
     
 // UTILITY COMMANDS 
-if(command === "help") {
+// Help  
+  if(command === "help") {
     message.reply(`here is the list of commands:
 \n__*Admin:*__
 \n__*Moderation:*__ *(requires a moderator role)*
@@ -44,6 +45,8 @@ if(command === "help") {
 \n**${config.prefix}cp** <rarity color> <drop> <length (minutes)> - posts a Capture Point log in the specified events channel
 \n**${config.prefix}uc** <length (minutes)> - posts an Undead City log in the specified events channel`);
 }
+  
+// Ping
 if(command === "ping") {
     const m = await message.channel.send("Ping?");
     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`)
@@ -51,7 +54,9 @@ if(command === "ping") {
     
  // ADMIN COMMANDS
  if(message.author.id === config.ownerID) {
- 
+   if(command === bob) {
+     message.channel.send("bob");
+   }
  }
     
  // MODERATOR COMMANDS
@@ -77,11 +82,11 @@ if(command === "ping") {
                    },
                 });
                 message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
-             }
              message.reply(rb + " has been muted.");
              rb.addRole(roleID);
          }
-     }
+ }
+     
      
      // Unmute
      if(command === "unmute") {
