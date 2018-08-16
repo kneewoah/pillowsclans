@@ -85,6 +85,7 @@ if(message.member.hasPermission("KICK_MEMBERS")) {
          const fetched = await message.channel.fetchMessages({limit: deleteCount});
          message.channel.bulkDelete(fetched).catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
      }
+}
 
 
  // CLANS COMMANDS
