@@ -283,6 +283,13 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          message.delete().catch(O_o=>{}); 
          message.channel.send(sayMessage);
      }
+      
+     // Speedz
+     if(command === "speedz") {
+       {setInterval(function() {
+         message.channel.send("Speedz is a reet");
+       }, 2000)}
+      }
   //filler
 });
 
