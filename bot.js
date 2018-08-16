@@ -288,16 +288,15 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      if(command === "flip") {
        
          var butt = Math.floor(Math.random() * 2) + 1;
-       
          let flip;
          if(butt === 1) {
             flip = "HEADS";
          } if(butt === 2) {
             flip = "TAILS";
          }
-         message.reply(flip)
-       //message.reply("your coin-flip returned " + flip + ".");
-       //message.channel.send(`https://bit.ly/pillowsbotcoinflip${flip}`);
+       
+         message.reply("your coin-flip returned " + flip + ".");
+         message.channel.send(`https://bit.ly/pillowsbotcoinflip${flip}`);
      }
       
   //filler
