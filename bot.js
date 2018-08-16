@@ -64,7 +64,7 @@ if(message.member.hasPermission("KICK_MEMBERS")) {
          if(!message.guild.roles.find("name", "Muted")) {
            message.guild.createRole({
              data: {
-               name: 'Mutes',
+               name: 'Muted',
                hoist: false,
                mentionable: false,
                SEND_MESSAGES: false,
