@@ -284,18 +284,6 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          message.channel.send(sayMessage);
      }
       
-     // Count
-     if(command === "count") {
-       if(message.author.id === config.ownerID) {
-         
-         let x = 1
-        
-         {setInterval(function() {
-         message.channel.send(x);
-         let x = x + 1
-         }, 2000)}
-       }
-     }
   //filler
 });
 
