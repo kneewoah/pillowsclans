@@ -284,12 +284,18 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          message.channel.send(sayMessage);
      }
       
-     // Speedz
+     // Count
      if(command === "speedz") {
-       {setInterval(function() {
-         message.channel.send("Speedz is a reet");
-       }, 2000)}
-      }
+       if(message.author.id === config.ownerID) {
+         
+         let x = 1
+        
+         {setInterval(function() {
+         message.channel.send(x);
+         let x = x + 1
+         }, 2000)}
+       }
+     }
   //filler
 });
 
