@@ -57,32 +57,7 @@ if(command === "ping") {
     
  // MODERATOR COMMANDS
  if(message.member.hasPermission("KICK_MEMBERS") {
-     
-     // Mute
-     if(command === "mute") {
-         let rb = message.mentions.members.first();
-         let roleID = message.guild.roles.find("name", "Muted").id;
-      
-         if(message.author.id === rb.id) {
-             message.reply("YOU'RE FUCKING RETARDED");
-         } else if(rb.roles.find("name", "Muted")) {
-             message.reply(rb + " is already muted you mormon.");
-         } else {
-             if(!message.guild.roles.find("name", "Muted") {
-                message.guild.createRole({
-                   data: {
-                      name: "Muted",
-                      hoist: false,
-                      mentionable: false,
-                      SEND_MESSAGES: false,
-                   },
-                });
-                message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
-              }
-             message.reply(rb + " has been muted.");
-             rb.addRole(roleID);
-         }
-     
+
      // Unmute
      if(command === "unmute") {
          let rb = message.mentions.members.first();
@@ -108,7 +83,7 @@ if(command === "ping") {
          const fetched = await message.channel.fetchMessages({limit: deleteCount});
          message.channel.bulkDelete(fetched).catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
      }
- 
+
 
  // CLANS COMMANDS
  if(message.member.roles.has(459896776174993409)) {
