@@ -60,8 +60,19 @@ if(message.member.hasPermission("KICK_MEMBERS")) {
   
      // Mute
      if(command === "mute") {
+       
+         if(!message.guilds.roles.find("name", "Muted")) {
+           message.guild.createRole({
+             data: {
+               name: 'Mutes',
+               hoist: false,
+               mentionable: false,
+               SEND_MESSAGES: false,
+             },
+           });
+         }
+       
          let rb = message.mentions.members.first();
-         
          let roleID = message.guild.roles.find("name", "Muted").id;
   
        
