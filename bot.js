@@ -287,13 +287,13 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      // Coin-flip
      if(command === "flip") {
        
-         const butt = Math.floor(Math.random() * 6) + 1;
+         const butt = Math.floor(Math.random() * 2) + 1;
        
          let flip;
          if(butt === "1") {
-         flip = "HEADS";
+            flip = "HEADS";
          } if(butt === "2") {
-         flip = "TAILS";
+            flip = "TAILS";
          }
          
        message.reply("your coin-flip returned " + flip + ".");
