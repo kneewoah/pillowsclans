@@ -56,7 +56,6 @@ if(command === "ping") {
  
     
  // MODERATOR COMMANDS
- if(message.member.hasPermission("KICK_MEMBERS") {
 
      // Unmute
      if(command === "unmute") {
