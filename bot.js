@@ -67,7 +67,7 @@ if(command === "ping") {
          } else if(rb.roles.find("name", "Muted")) {
              message.reply(rb + " is already muted you mormon.");
          } else {
-             await if(message.guild.roles.find("name", "Muted") {
+             if(message.guild.roles.find("name", "Muted") {
                 message.guild.createRole({
                    !data: {
                       name: "Muted",
