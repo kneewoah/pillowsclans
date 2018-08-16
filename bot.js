@@ -5,7 +5,7 @@ const config = require("./config.json");
 
 // ON READY
 client.on("ready", () => {
-  
+  console.log("Ready!")
 });
 
 // GUILDS
