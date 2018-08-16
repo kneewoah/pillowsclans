@@ -259,8 +259,12 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      // Dice
      if(command === "roll") {
        
-         let sides = parseInt(args[0], 10);
-          
+         let sides;
+         if(args[0]) {
+           let sides = parseInt(args[0], 10);
+         } if(!args[0]) {
+           let sides = "6"
+         }
          const roll = Math.floor(Math.random() * sides) + 1;
          message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
              .then((msg)=>{setTimeout(function() {
