@@ -290,9 +290,9 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          var butt = Math.floor(Math.random() * 2) + 1;
        
          let flip;
-         if(butt = 1) {
+         if(butt === 1) {
             flip = "HEADS";
-         } if(butt = 2) {
+         } if(butt === 2) {
             flip = "TAILS";
          }
          message.reply(flip)
