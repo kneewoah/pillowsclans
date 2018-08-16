@@ -69,12 +69,10 @@ if(message.member.hasPermission("KICK_MEMBERS")) {
              message.reply(rb + " is already muted you mormon.");
          } else {
              message.reply(rb + " has been muted.");
-             if(!message.guild.roles.find("name", "Muted") {
-                message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
-             }
              rb.addRole(roleID);
          }
       }
+  
      // Unmute
      if(command === "unmute") {
          let rb = message.mentions.members.first();
