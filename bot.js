@@ -297,7 +297,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          }
          
        message.reply("your coin-flip returned " + flip + ".");
-       message.channel.send(`https://bit.ly/pillowsbotcoinflip${flip}`
+       message.channel.send(`https://bit.ly/pillowsbotcoinflip${flip}`);
      }
       
   //filler
