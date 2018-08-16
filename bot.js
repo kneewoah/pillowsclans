@@ -58,7 +58,20 @@ if(command === "ping") {
  // MODERATOR COMMANDS
 if(message.member.hasPermission("KICK_MEMBERS")) {
   
-     
+     // Mute
+     if(command === "mute") {
+         let rb = message.mentions.members.first();
+         let roleID = message.guild.roles.find("name", "Muted").id;
+  
+         if(message.author.id === rb.id) {
+             message.reply("YOU'RE FUCKING RETARDED");
+         } else if(rb.roles.find("name", "Muted")) {
+             message.reply(rb + " is already muted you mormon.");
+         } else {
+             message.reply(rb + " has been muted.");
+             rb.addRole(roleID);
+         }
+     }
   
      // Unmute
      if(command === "unmute") {
