@@ -287,12 +287,14 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      // Coin-flip
      if(command === "flip") {
        
-         const butt = Math.floor(Math.random() * 2) + 1;
+         var butt = Math.floor(Math.random() * 2) + 1;
+         
+         message.channel.send(butt)
        
          let flip;
-         if(butt === "1") {
+         if(butt = 1) {
             flip = "HEADS";
-         } if(butt === "2") {
+         } if(butt = 2) {
             flip = "TAILS";
          }
          
