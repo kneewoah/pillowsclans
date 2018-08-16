@@ -262,7 +262,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          let sides;
          if(!args[0]) {
            let sides = 6;
-         } else {
+         } if(args[0]) {
            let sides = parseInt(args[0], 10);
          }
          const roll = Math.floor(Math.random() * sides) + 1;
