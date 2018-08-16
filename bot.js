@@ -67,7 +67,7 @@ if(command === "ping") {
          } else if(rb.roles.find("name", "Muted")) {
              message.reply(rb + " is already muted you mormon.");
          } else {
-             if(message.guild.roles.find("name", "Muted") {
+             await if(message.guild.roles.find("name", "Muted") {
                 message.guild.createRole({
                    !data: {
                       name: "Muted",
@@ -75,6 +75,7 @@ if(command === "ping") {
                       mentionable: false,
                    },
                 });
+                message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.")
              }
              message.reply(rb + " has been muted.");
              rb.addRole(roleID);
