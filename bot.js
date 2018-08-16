@@ -69,7 +69,7 @@ if(command === "ping") {
          } else {
              if(message.guild.roles.find("name", "Muted") {
                 message.guild.createRole({
-                   !data: {
+                   data: {
                       name: "Muted",
                       hoist: false,
                       mentionable: false,
