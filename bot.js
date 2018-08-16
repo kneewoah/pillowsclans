@@ -282,6 +282,20 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          const sayMessage = args.join(" ");
          message.delete().catch(O_o=>{}); 
          message.channel.send(sayMessage);
+       
+     // Coin-flip
+     }
+     if(command === "flip" || command === "coin" || command === "coinflip") {
+         const butt = Math.floor(Math.random() * 6) + 1);
+       
+         let flip;
+         if(butt === "1") {
+         flip = "HEADS"
+         } if(butt === "2") {
+         flip = "TAILS"
+         }
+         
+       message.reply("your coin-flip returned " + flip + ".")
      }
       
   //filler
