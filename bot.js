@@ -55,7 +55,7 @@ if(command === "ping") {
  }
     
  // MODERATOR COMMANDS
- if(message.member.hasPermission("MANAGE_ROLES_OR_PERMISSIONS" || "KICK_MEMBERS" || "MANAGE_GUILD") {
+ if(message.member.hasPermission("KICK_MEMBERS") {
      
      
      
