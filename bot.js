@@ -263,7 +263,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          if(!args[0]) {
            let sides = 6;
          } else {
-         let sides = parseInt(args[0], 10);
+           let sides = parseInt(args[0], 10);
          }
          const roll = Math.floor(Math.random() * sides) + 1;
          message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
