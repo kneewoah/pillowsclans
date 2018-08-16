@@ -55,7 +55,7 @@ if(command === "ping") {
  }
     
  // MODERATOR COMMANDS
- if(message.member.roles.find("name", "Discord Admin") || message.member.roles.find("name", "Moderator")) {
+ if(message.member.hasPermission("MANAGE_ROLES_OR_PERMISSIONS" || "KICK_MEMBERS" || "MANAGE_GUILD") {
      
      // Mute
      if(command === "mute") {
@@ -67,17 +67,7 @@ if(command === "ping") {
          } else if(rb.roles.find("name", "Muted")) {
              message.reply(rb + " is already muted you mormon.");
          } else {
-             if(message.guild.roles.find("name", "Muted") {
-                message.guild.createRole({
-                   data: {
-                      name: "Muted",
-                      hoist: false,
-                      mentionable: false,
-                      SEND_MESSAGES: false,
-                   },
-                });
-                message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
-             }
+             
              message.reply(rb + " has been muted.");
              rb.addRole(roleID);
          }
