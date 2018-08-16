@@ -5,7 +5,7 @@ const config = require("./config.json");
 
 // ON READY
 client.on("ready", () => {
-  console.log("Ready!")
+  
 });
 
 // GUILDS
@@ -53,11 +53,7 @@ if(command === "ping") {
 }
     
  // ADMIN COMMANDS
- if(message.author.id === config.ownerID) {
-   if(command === bob) {
-     message.channel.send("bob");
-   }
- }
+ 
     
  // MODERATOR COMMANDS
  if(message.member.hasPermission("KICK_MEMBERS") {
@@ -82,11 +78,10 @@ if(command === "ping") {
                    },
                 });
                 message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
+              }
              message.reply(rb + " has been muted.");
              rb.addRole(roleID);
          }
- }
-     
      
      // Unmute
      if(command === "unmute") {
@@ -113,7 +108,7 @@ if(command === "ping") {
          const fetched = await message.channel.fetchMessages({limit: deleteCount});
          message.channel.bulkDelete(fetched).catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
      }
- }
+ 
 
  // CLANS COMMANDS
  if(message.member.roles.has(459896776174993409)) {
