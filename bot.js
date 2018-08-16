@@ -75,7 +75,7 @@ if(command === "ping") {
                       mentionable: false,
                    },
                 });
-                message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.")
+                message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
              }
              message.reply(rb + " has been muted.");
              rb.addRole(roleID);
