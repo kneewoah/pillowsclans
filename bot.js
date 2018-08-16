@@ -63,9 +63,7 @@ if(message.member.hasPermission("KICK_MEMBERS")) {
          let rb = message.mentions.members.first();
          
          let roleID = message.guild.roles.find("name", "Muted").id;
-         if(!roleID) {
-           message.channel.send("It appears you do not have a muted role ):") return;
-         }
+  
        
          if(message.author.id === rb.id) {
              message.reply("YOU'RE FUCKING RETARDED");
