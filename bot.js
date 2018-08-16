@@ -56,7 +56,7 @@ if(command === "ping") {
  
     
  // MODERATOR COMMANDS
-if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR")) {
+if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message.author.id === config.ownerID) {
   
      // Mute
      if(command === "mute") {
