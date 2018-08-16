@@ -67,7 +67,11 @@ if(message.member.hasPermission("KICK_MEMBERS")) {
              color: '0xb51515',
              hoist: false,
              mentionable: false,
-             SEND_MESSAGES: false,
+             permissions: [
+               {
+                 SEND_MESSAGES: false,
+               }
+             ]   
            });
            message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
          }
