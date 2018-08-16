@@ -31,9 +31,9 @@ client.on("message", async message => {
 \n__*Admin:*__
 \n__*Moderation:*__ *(requires a moderator role)*
 \n**${config.prefix}purge** - Delete between 2 and 100 messages
-\n**${config.prefix}mute <rulebreaker>** - Permanently mute someone (!unmute to unmute)
-\n**${config.prefix}kick <rulebreaker>** - Kick an annoying person from the server
-\n**${config.prefix}ban <rulebreaker>** - Ban a randie
+\n**${config.prefix}mute** <rulebreaker> - Permanently mute someone (!unmute to unmute)
+\n**${config.prefix}kick** <rulebreaker> - Kick an annoying person from the server
+\n**${config.prefix}ban** <rulebreaker> - Ban a randie
 \n__*Fun:*__
 \n**${config.prefix}say** - The bot parrots what you type
 \n**${config.prefix}roll** <# of sides> - Roll a die!
@@ -258,7 +258,9 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
   
      // Dice
      if(command === "roll") {
-         const roll = Math.floor(Math.random() * 6) + 1;
+         let sides = parseInt(args[0], 10)
+         
+         const roll = Math.floor(Math.random() * sides) + 1;
          message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
              .then((msg)=>{setTimeout(function() {
              {setTimeout(function() {
