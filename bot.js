@@ -63,9 +63,12 @@ if(message.member.hasPermission("KICK_MEMBERS")) {
        
          if(!message.guild.roles.find("name", "Muted")) {
            message.guild.createRole({
-             name: 'Muted', color: '0xb51515',
-             hoist: false, mentionable: false,
-             permissions: [0] });
+             name: 'Muted',
+             color: '0xb51515',
+             hoist: false,
+             mentionable: false,
+             permissions: [] 
+           });
            message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
          }
        
