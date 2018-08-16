@@ -260,11 +260,11 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      if(command === "roll") {
        
          let sides;
-         if(args[0]) {
-           let sides = parseInt(args[0], 10);
-         } else {
-           let sides = "6";
-         }
+         if(!args[0])
+           return; let sides = 6
+         
+         let sides = parseInt(args[0], 10);
+       
          const roll = Math.floor(Math.random() * sides) + 1;
          message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
              .then((msg)=>{setTimeout(function() {
