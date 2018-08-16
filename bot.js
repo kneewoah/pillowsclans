@@ -10,7 +10,7 @@ client.on("ready", () => {
 
 // GUILDS
 client.on("guildCreate", guild => {
-  config.ownerID.send(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+  
 });
 
 client.on("guildDelete", guild => {
@@ -67,6 +67,15 @@ if(command === "ping") {
          } else if(rb.roles.find("name", "Muted")) {
              message.reply(rb + " is already muted you mormon.");
          } else {
+             if(message.guild.roles.find("name", "Muted") {
+                message.guild.createRole({
+                   !data: {
+                      name: "Muted",
+                      hoist: false,
+                      mentionable: false,
+                   },
+                });
+             }
              message.reply(rb + " has been muted.");
              rb.addRole(roleID);
          }
