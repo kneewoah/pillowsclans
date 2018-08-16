@@ -261,8 +261,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
        
         let sides = parseInt(args[0], 10);
        
-        if(!sides)
-        let sides = "6";
+        if(!sides) message.reply("You did not specify a valid number of sides on the die I am going to roll");
        
          const roll = Math.floor(Math.random() * sides) + 1;
          message.channel.send("🔹      |   **Rolling**...   |      🔹\n**==================**\n➡️ | 🎲⚫️⚫️⚫️⚫  | ⬅️")
