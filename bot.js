@@ -285,8 +285,9 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      }  
   
      // Coin-flip
-     if(command === "flip" || command === "coin" || command === "coinflip") {
-         const butt = Math.floor(Math.random() * 6) + 1);
+     if(command === "flip") {
+       
+         const butt = Math.floor(Math.random() * 6) + 1;
        
          let flip;
          if(butt === "1") {
