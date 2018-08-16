@@ -73,6 +73,7 @@ if(command === "ping") {
                       name: "Muted",
                       hoist: false,
                       mentionable: false,
+                      SEND_MESSAGES: false,
                    },
                 });
                 message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
