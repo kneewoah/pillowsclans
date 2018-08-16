@@ -285,7 +285,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      }
       
      // Count
-     if(command === "speedz") {
+     if(command === "count") {
        if(message.author.id === config.ownerID) {
          
          let x = 1
