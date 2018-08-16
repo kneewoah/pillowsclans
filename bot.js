@@ -288,8 +288,6 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      if(command === "flip") {
        
          var butt = Math.floor(Math.random() * 2) + 1;
-         
-         message.channel.send(butt)
        
          let flip;
          if(butt = 1) {
