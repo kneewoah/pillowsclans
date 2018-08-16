@@ -8,15 +8,6 @@ client.on("ready", () => {
   
 });
 
-// GUILDS
-client.on("guildCreate", guild => {
-  
-});
-
-client.on("guildDelete", guild => {
-
-});
-
 // ON MESSAGE
 client.on("message", async message => {
   if(message.author.bot || message.content.indexOf(config.prefix) !== 0) return;
