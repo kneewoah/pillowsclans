@@ -106,13 +106,13 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      // Kick
      if(command === "kick") {
        
-       let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+       let member = message.mentions.members.first();
        if(!member) return message.reply("Please mention a valid member of this server");
        if(message.author.id === member.id) return message.reply("you can't kick yourself you idiot.");
-       if(!member.kickable) return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
-       
+       if(!member.kickable) return message.reply("I cannot kick this user! Do they have a higher role? Do I have ban permissions?");
+
        let reason = args.slice(1).join(' ');
-       if(!reason) reason = "No reason provided";
+       if(!reason) reason = "being an annoying little bitch";
        
        await member.kick(reason)
          .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
@@ -124,7 +124,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
        
        let member = message.mentions.members.first();
        if(!member) return message.reply("Please mention a valid member of this server");
-       if(message.author.id === member.id) return message.reply("you can't kick yourself you idiot.");
+       if(message.author.id === member.id) return message.reply("you can't ban yourself you idiot.");
        if(!member.bannable) return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
        
        let reason = args.slice(1).join(' ');
