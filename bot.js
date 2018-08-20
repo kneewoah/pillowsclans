@@ -107,8 +107,8 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      if(command === "kick") {
        
        let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-       if(message.author.id === member.id) return message.reply("you can't kick yourself you idiot.");
        if(!member) return message.reply("Please mention a valid member of this server");
+       if(message.author.id === member.id) return message.reply("you can't kick yourself you idiot.");
        if(!member.kickable) return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
        
        let reason = args.slice(1).join(' ');
@@ -123,8 +123,8 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      if(command === "ban") {
        
        let member = message.mentions.members.first();
-       if(message.author.id === member.id) return message.reply("you can't ban ourself you idiot.");
        if(!member) return message.reply("Please mention a valid member of this server");
+       if(message.author.id === member.id) return message.reply("you can't kick yourself you idiot.");
        if(!member.bannable) return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
        
        let reason = args.slice(1).join(' ');
