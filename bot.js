@@ -67,7 +67,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
              color: '0xb51515',
              hoist: false,
              mentionable: false,
-             permissions: ["READ_MESSAGE_HISTORY", "SPEAK", "USE_VAD", "CHANGE_NICKNAME"] 
+             permissions: ["READ_MESSAGE_HISTORY", "READ_MESSAGES", "SPEAK", "USE_VAD", "CHANGE_NICKNAME"] 
            });i
            message.channel.send("Because there was no `muted` role, I've gone ahead and created one for you.");
          }
