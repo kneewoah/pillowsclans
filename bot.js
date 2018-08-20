@@ -103,37 +103,7 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
          }
      }
   
-     // Kick
-     if(command === "kick") {
-       
-       let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-       if(message.author.id === member.id) return message.reply("you can't kick yourself you idiot.");
-       if(!member) return message.reply("Please mention a valid member of this server");
-       if(!member.kickable) return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
-       
-       let reason = args.slice(1).join(' ');
-       if(!reason) reason = "No reason provided";
-       
-       await member.kick(reason)
-         .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-       message.reply(`${member.user.tag} has been kicked by ${message.author.tag} for ${reason}`);
-     }
-  
-     // Ban
-     if(command === "ban") {
-       
-       let member = message.mentions.members.first();
-       if(message.author.id === member.id) return message.reply("you can't ban ourself you idiot.")(
-       if(!member) return message.reply("Please mention a valid member of this server");
-       if(!member.bannable) return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
-       
-       let reason = args.slice(1).join(' ');
-       if(!reason) reason = "having an ugly face";
-       
-       await member.ban(reason)
-         .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-       message.reply(`${member.user.tag} has been banned by ${message.author.tag} for ${reason}`);
-     }
+     
      
      // Purge
      if(command === "purge") {
