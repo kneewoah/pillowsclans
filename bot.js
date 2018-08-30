@@ -137,8 +137,8 @@ if(message.member.hasPermission("MANAGE_MESSAGES" || "ADMINISTRATOR") || message
      
      // Purge
      if(command === "purge") {
-         const deleteCount = parseInt(args[0], 10);
-         
+         const deleteCount = parseInt(args[0], 10) + 1;
+       
          if(!deleteCount || deleteCount < 2 || deleteCount > 100)
          return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
     
